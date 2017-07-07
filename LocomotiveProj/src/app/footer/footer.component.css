@@ -1,0 +1,12 @@
+.copyright{
+	text-transform: uppercase;
+	margin-top: 15px;
+	color: #999c9f;
+
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:#337ab7 !important;
+}
+.footerLoco{
+	margin-top:390px;
+}
