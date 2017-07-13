@@ -14,7 +14,7 @@ export class DataDetailsComponent implements OnInit {
 
   constructor(private http: Http) { 
   
-       this.data=this.getData();
+       this.data=this.getData().subscribe(data=>this.data=data);
 	   console.log(this.data);
 		 }
 		
@@ -25,7 +25,7 @@ export class DataDetailsComponent implements OnInit {
   
   getData()
   {
-	  return this.http.get("assets/locoData.json")
+	  return this.http.get("api/ldv")
                          .map((response: Response) => response.json());
   }
   
