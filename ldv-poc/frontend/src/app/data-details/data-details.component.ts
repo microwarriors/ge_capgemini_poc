@@ -14,14 +14,19 @@ export class DataDetailsComponent implements OnInit {
 
   constructor(private http: Http) { 
   
-       
+       this.data=this.getData();
+	   console.log(this.data);
 		 }
 		
 		 
   ngOnInit() {
- this.http.get("assets/locoData.json")
-                         .map((response: Response) => response.json())
-						 .subscribe(response  => this.data=response , error => console.log(error));
+ 
+  }
+  
+  getData()
+  {
+	  return this.http.get("assets/locoData.json")
+                         .map((response: Response) => response.json());
   }
   
   

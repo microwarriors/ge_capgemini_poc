@@ -69,12 +69,12 @@
 			</plugin>
 		</plugins>
 
-		<resources>
+		<!-- <resources>
 			<resource>
 				<directory>frontend/dist</directory>
 				<targetPath>static</targetPath>
 			</resource>
-		</resources>
+		</resources> -->
 	</build>
 
 </project>
