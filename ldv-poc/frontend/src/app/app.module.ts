@@ -23,8 +23,8 @@ import { AgmCoreModule } from '@agm/core';
  
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/data', pathMatch: 'full' },
-		{ path: 'data',  component: DataComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+	{ path: 'login', component: LoginComponent },
   { path: 'data',  component: DataComponent },
   {path:'dataDetails', component: DataDetailsComponent}
   ]
