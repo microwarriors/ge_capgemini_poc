@@ -5,6 +5,7 @@
 }
 .navbar{
 	border:none !important; /*added by alok to remove border*/
+	    margin-bottom: 0px!important;
 }
 .navbar-nav{
 	float:right !important;
@@ -36,8 +37,35 @@ background-color:#e5e5e5 !important;
 {
 	margin-top:60px;
 }
-
-.mar-top-10
-{
-	margin-top:10px;
+.container-fluid mainComponent{
+	  float: left;
+  width: 100%;
+  background-color: black;
+  position: relative;
 }
+.firstdiv{
+ float: left;
+  width: 50%;
+  height: 400px;
+  position: absolute;
+  background: #e0ebeb;
+  
+	
+}
+
+.seconddiv{
+	float: right;
+  width: 50%;
+  position: relative;
+  height: 400px;
+  background: #e0ebeb;
+	
+}
+.buttonclass{
+	margin-top:5px;
+	margin-bottom:5px;
+	float:right;
+}
+
+
+ 

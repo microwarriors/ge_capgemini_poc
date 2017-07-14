@@ -1,4 +1,28 @@
 .mainComponent{
  margin-bottom: 0px;
-	
+	margin-top:2px;
 } 
+.face-txt{
+    margin: 0;
+    padding: 0 152px 25px 50px;
+    min-height: 125px;
+	float:left;
+}
+.no-bullets {
+    list-style-type: none;
+}
+
+	 agm-map {
+  height: 355px;
+}
+.googlemap{
+float :right;	
+}
+.classexpandvideo{
+	width:100%;
+	height:400px;
+}
+.videochange{
+	width:300px;
+	heifth:300px;
+}

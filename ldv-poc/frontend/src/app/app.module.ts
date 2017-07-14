@@ -9,10 +9,22 @@ import { DataDetailsComponent } from './data-details/data-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule ,ReactiveFormsModule}   from '@angular/forms';
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
+import { ChartsModule } from 'ng2-charts';
+import { Component, Input } from '@angular/core';
+import { Injectable }     from '@angular/core';
+import { Response, Headers, RequestOptions } from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import { AgmCoreModule } from '@agm/core';
+
+ 
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/login', pathMatch: 'full' },
-		{ path: 'login',  component: LoginComponent},
+	{ path: '', redirectTo: '/data', pathMatch: 'full' },
+		{ path: 'data',  component: DataComponent },
   { path: 'data',  component: DataComponent },
   {path:'dataDetails', component: DataDetailsComponent}
   ]
@@ -24,14 +36,25 @@ const routes: Routes = [
     DataComponent,
     DataDetailsComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+	
+	
   ],
   imports: [
     BrowserModule,
 	   RouterModule.forRoot(routes),
 	   HttpModule,
 	   FormsModule,
-	   ReactiveFormsModule
+	   ReactiveFormsModule,
+	    VgCoreModule,
+        VgControlsModule,
+        VgOverlayPlayModule,
+        VgBufferingModule,
+		ChartsModule,
+		BrowserModule, 
+		AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBli14IYUYuWrKb0hicJVvSWlUTdwcOWoU'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
