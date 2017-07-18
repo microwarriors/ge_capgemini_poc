@@ -19,8 +19,9 @@ import { Injectable }     from '@angular/core';
 import { Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import { AgmCoreModule } from '@agm/core';
+import {DataTableModule} from "angular2-datatable";
+import { DataFilterPipe }   from './table.pipe';
 
- 
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -37,7 +38,7 @@ const routes: Routes = [
     DataDetailsComponent,
     FooterComponent,
     LoginComponent,
-	
+	DataFilterPipe
 	
   ],
   imports: [
@@ -52,6 +53,7 @@ const routes: Routes = [
         VgBufferingModule,
 		ChartsModule,
 		BrowserModule, 
+    DataTableModule,
 		AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBli14IYUYuWrKb0hicJVvSWlUTdwcOWoU'
     })

@@ -61,3 +61,53 @@ line-height: 31px;
 {
 	margin-top:80px;
 }
+.mar-top-15
+{
+    margin-top:15px;
+}
+
+.mar-top-10
+{
+    margin-top:10px;
+}
+
+.labelFontZero
+    {
+        font-weight: 10;
+    }
+
+    @media (min-width: 1200px)
+   { .container {
+    width: 1300px !important;
+}}
+
+.col-blue
+{
+    color:#337ab7
+}
+
+.page-header
+{
+    margin-top:0px;
+    padding-bottom:0px;
+}
+
+div.post h3
+{
+    font-size:  20px !important;
+}
+
+.mar-topNeg-20
+{
+margin-top:-20px;
+}
+
+.labelFontCol
+{
+font: bold 1.1em sans-serif;
+    color: gray;
+}
+
+.disabled 
+{ cursor: not-allowed; 
+}

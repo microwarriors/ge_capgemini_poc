@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild  } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
@@ -11,16 +11,30 @@ import 'rxjs/add/operator/catch';
 })
 export class DataDetailsComponent implements OnInit {
  data: any;  
+ fileData :any;
+ hideDetails:boolean=true;
+ showTable:boolean=false;
+ public filterQuery = "";
+    public rowsOnPage = 10;
+    public sortBy = "email";
+    public sortOrder = "asc";
 
-  constructor(private http: Http) { 
+@ViewChild('fileInput') myFileInput: any;
   
-       this.data=this.getData().subscribe(data=>this.data=data);
-	   console.log(this.data);
+  constructor(private http: Http) { 
+  this.hideDetails=true;
+     this.showTable=false;
+       this.fileData=this.getData().subscribe(data=>this.fileData=data);
+	   console.log(this.fileData);
 		 }
 		
 		 
   ngOnInit() {
- 
+ this.http.get("assets/tableData.json")
+  .map((response: Response) => response.json())
+            .subscribe(data=> {
+                this.data = data
+            });
   }
   
   getData()
@@ -28,7 +42,23 @@ export class DataDetailsComponent implements OnInit {
 	  return this.http.get("api/ldv")
                          .map((response: Response) => response.json());
   }
-  
+ removeUloadedFile()
+ {
+     //console.log(this.myFileInput.nativeElement.files);
+     this.myFileInput.nativeElement.value="";
+ }
+ 
+ getTable()
+ {
+     this.hideDetails=false;
+     this.showTable=true;
+ }
+
+ hideTable()
+ {
+      this.hideDetails=true;
+     this.showTable=false;
+ }
   
  fileUpload(event) {
     let fileList: FileList = event.target.files;
