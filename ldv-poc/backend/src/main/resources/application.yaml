@@ -1,3 +1,18 @@
 server:
   port: 8081
   
+spring:
+  application:
+    name: ldv-poc
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled:  false
+  
