@@ -70,29 +70,14 @@ export class DataDetailsComponent implements OnInit {
       console.log(this.ckB);
     if(fileList.length > 0) {
         let file: File = fileList[0];
-<<<<<<< HEAD
-        console.log("file--------------->");
-        console.log(file);
-        let formData = new FormData();
-        console.log("formData--------------->");
-        console.log(formData);
-        formData.append('uploadFile', file);
-    
-=======
         let formData:FormData = new FormData();
         formData.append('uploadFile', file, file.name);
-         formData.append('fileType', this.ckB);
-         console.log(formData);
-<<<<<<< HEAD
->>>>>>> aa2ecdefc3e898abfc0591f90c5774098b8f3941
-=======
->>>>>>> branch 'master' of https://github.com/microwarriors/ge_capgemini_poc.git
+        formData.append('fileType', this.ckB);
+        console.log(formData);
         let headers = new Headers();
         headers.append('Content-Type', 'multipart/form-data');
         headers.append('Accept', 'application/json');
         let options = new RequestOptions({ headers: headers });
-        console.log("headers--------------->");
-        console.log(headers);
         this.http.post("api/locoData", formData,headers)
             .map(res => res.json())
             .catch(error => Observable.throw(error))
