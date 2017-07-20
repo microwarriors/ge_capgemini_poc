@@ -65,26 +65,26 @@ export class DataDetailsComponent implements OnInit {
      this.showTable=false;
  }
   
- fileUpload(event) {
+ fileUpload(event) { 
     let fileList: FileList = event.target.files;
       console.log(this.ckB);
     if(fileList.length > 0) {
         let file: File = fileList[0];
         let formData:FormData = new FormData();
         formData.append('uploadFile', file, file.name);
-         formData.append('fileType', this.ckB);
-         console.log(formData);
+        formData.append('fileType', this.ckB);
+        console.log(formData);
         let headers = new Headers();
         headers.append('Content-Type', 'multipart/form-data');
         headers.append('Accept', 'application/json');
-        //let options = new RequestOptions({ headers: headers });
-       /* this.http.post(`${this.apiEndPoint}`, formData, options)
+        let options = new RequestOptions({ headers: headers });
+        this.http.post("api/locoData", formData,headers)
             .map(res => res.json())
             .catch(error => Observable.throw(error))
             .subscribe(
                 data => console.log('success'),
                 error => console.log(error)
-            )*/
+            )
     }
 }
 
