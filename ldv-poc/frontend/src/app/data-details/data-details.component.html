@@ -2,21 +2,33 @@
 
 <!-- below div for hiding-->
 <div class="" *ngIf="hideDetails">
-<div class="row mar-top-15">
+<div class="row mar-top-10">
 <div class="col-sm-12 col-blue">
 <h3>Locomotive Data</h3>
 <div class="headingBorder"></div>
 </div>
 </div>
 
-<div class="row mar-top-15">
+
+
+<div class="bottomBorder"></div>
+</div>
+
+
+<div class="row mar-top-10">
+
+<!-- below div for hiding-->
+<div class="" *ngIf="hideDetails">
+<div class="col-sm-4">
+
+
+<div class="row mar-top-10">
 <div class="col-sm-12 ">
 <span class="labelFontCol">Select below to upload file</span>
-
 </div>
 </div>
 
-<div class="row mar-top-15">
+<div class="row mar-top-10">
 <div class="col-sm-12">
 <label class="labelFontZero"><input  type="radio" value="fra" [(ngModel)]="ckB" (change)="removeUloadedFile()"/> FRA Data</label>
 <label class="labelFontZero"><input  type="radio"  value="ptc" [(ngModel)]="ckB"  (change)="removeUloadedFile()"/> PTC Data</label>
@@ -24,34 +36,7 @@
 
 </div>
 </div>
-<div class="bottomBorder"></div>
-</div>
-
-
-<div class="row mar-top-15">
-
-<!-- below div for hiding-->
-<div class="" *ngIf="hideDetails">
-<div class="col-sm-3">
-
-
-<!--<div class="row mar-top-15">
-<div class="col-sm-12">
-
-
-</div>
-</div>
-
-<div class="row mar-top-15">
-<div class="col-sm-12">
-
-
-
-</div>
-</div>-->
-
-
-{{fileData.st}}
+<div class="bottomBorderChkbx"></div>
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
@@ -72,24 +57,36 @@
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">End Time/Date :</span>
-<span>{{fileData.ed}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">End Time/Date</span>
+    </div>
+<div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.ed"/>
 </div>
-</div>
-
-
-<div class="row mar-top-15">
-<div class="col-sm-12">
-<span class="labelFontCol">Wheel Diameter :</span>
-<span>{{fileData.wd}}</span>
 </div>
 </div>
 
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">Adjust Date Time :</span>
-<span>{{fileData.adt}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Wheel Diameter</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.wd"/>
+    </div>
+</div>
+</div>
+
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Adjust Date Time</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.adt"/>
+    </div>
 </div>
 </div>
 
@@ -115,55 +112,83 @@
 </div>
 
 <!--second column-->
-<div class="col-sm-4 mar-top-15">
+<div class="col-sm-3 mar-top-84">
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">Wheel Diameter :</span>
-<span>{{fileData.wd}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Wheel Diameter</span>
+    </div>
+<div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.wd"/>
 </div>
-</div>
-
-<div class="row mar-top-15">
-<div class="col-sm-12">
-<span class="labelFontCol">Customer Name :</span>
-<span>{{fileData.custName}}</span>
 </div>
 </div>
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">Serial Number:</span>
-<span>{{fileData.sNo}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Customer Name</span>
+</div>
+<div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.custName"/>
+</div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Serial Number</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.sNo"/>
+    </div>
 </div>
 </div>
 
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">Name :</span>
-<span>{{fileData.name}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Name</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.name"/>
+    </div>
 </div>
 </div>
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">Version :</span>
-<span>{{fileData.version}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Version</span>
+    </div>
+    <div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.version"/>
+    </div>
 </div>
 </div>
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">Start Time/Date :</span>
-<span>{{fileData.sd}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Start Time/Date</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.sd"/>
+    </div>
 </div>
 </div>
 
 <div class="row mar-top-15">
 <div class="col-sm-12">
-<span class="labelFontCol">End Time/Date :</span>
-<span>{{fileData.ed}}</span>
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">End Time/Date</span>
+    </div>
+    <div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.ed"/>
+    </div>
 </div>
 </div>
 
@@ -239,23 +264,23 @@
                 <thead>
                 <tr>
                    <!-- <th style="width: 10%"></th>-->
-                    <th >
+                    <th class="col-sm-2">
                         <mfDefaultSorter by="time">Time Stamp</mfDefaultSorter>
                     </th>
-                    <th >
+                    <th class="col-sm-2">
                         <mfDefaultSorter by="distance">Distance</mfDefaultSorter>
                     </th>
-                    <th >
+                    <th class="col-sm-2">
                         <mfDefaultSorter by="speed">Speed</mfDefaultSorter>
                     </th>
-                    <th >
+                    <th class="col-sm-2">
                         <mfDefaultSorter [by]="sortByWordLength">Tractive Effort Total</mfDefaultSorter>
                     </th>
-                     <th >
+                     <th class="col-sm-2">
                         <mfDefaultSorter [by]="sortByWordLength">EAB BP Pressure</mfDefaultSorter>
                     </th>
                      
-                     <th >
+                     <th class="col-sm-2">
                         <mfDefaultSorter [by]="sortByWordLength">EOT BP Pressure</mfDefaultSorter>
                     </th>
                       <!--  <th >
@@ -274,12 +299,12 @@
                     <!--<td>
                         <button (click)="remove(item)" class="btn btn-danger">x</button>
                     </td>-->
-                    <td>{{item.ts}}</td>
-                    <td>{{item.distance}}</td>
-                    <td class="">{{item.speed}}</td>
-                    <td>{{item.tet}}</td>
-                      <td>{{item.eab }}</td>
-                        <td>{{item.eot }}</td>
+                    <td class="col-sm-2">{{item.ts}}</td>
+                    <td class="col-sm-2">{{item.distance}}</td>
+                    <td class="col-sm-2">{{item.speed}}</td>
+                    <td class="col-sm-2">{{item.tet}}</td>
+                      <td class="col-sm-2">{{item.eab }}</td>
+                        <td class="col-sm-2">{{item.eot }}</td>
                 </tr>
                 </tbody>
                 <tfoot>
@@ -300,7 +325,7 @@
 <div class="">
 <!--third column -->
 
-<div class="col-sm-3 mar-topNeg-60 mar-top-15 leftBorder">
+<div class="col-sm-3 mar-topNeg-60 mar-top-15 leftBorder lineHeight">
 <div>
         <div class="post">
           <p><img src="./assets/powerHaul.jpg" alt="website template image" class="bordered"/></p>
