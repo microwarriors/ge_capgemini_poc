@@ -1,5 +1,6 @@
 .navbar {
     position: none !important;
+	color:#a8bddd;
 }
 @media (min-width: 1200px)
 {

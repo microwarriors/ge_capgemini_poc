@@ -15,8 +15,8 @@ export class DataComponent implements OnInit {
  showTable:boolean=true;
  showGraph:boolean=false;
    public  localVar:any;
+ linedata:Object;
  
-  
   
   
   
@@ -25,9 +25,17 @@ export class DataComponent implements OnInit {
    this.showHide = true;
    this.showTable=false;
    this.showGraph=true;
- 
+   this.linedata = {
+      chart: { },
+      linedata: [
+        {value: 500},
+        {value: 600},
+        {value: 700}
+      ]
+    };
+  
   }
-
+  
   ngOnInit() {
 var latarray = [42.85,43.85,44.85];
 var longarray =[-94.65,-111.65,-118.65];
