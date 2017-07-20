@@ -1,105 +1,106 @@
 import { Component, OnInit } from '@angular/core';
 
 import {Http, Response} from '@angular/http'
+declare var google: any;
 @Component({
   selector: 'app-data',
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.css']
 })
 export class DataComponent implements OnInit {
-IsHidden = false;
-//this.redClassBool = false;
+
  name:string;
-  showHide:boolean ;
+  showHide:boolean =false;
   result:any;
+ showTable:boolean=true;
+ showGraph:boolean=false;
    public  localVar:any;
-  // google maps zoom level
-  zoom: number = 8;
-  
-  // initial center position for the map
-  lat: any = 51.673858;
-  lng: any = 7.815982;
-  label?: string;
-	draggable: boolean;
-  
-  results = [];
-  
-  showRandomMarkers() {
-  console.log("hi");
-    let randomLat: number, randomLng: number;
-	
-    this.results = [];
-    for (let i = 0 ; i < 9; i++) {
-      randomLat = Math.random() * 0.0099 + 43.7250;
-      randomLng = Math.random() * 0.0099 + -79.7699;
-      this.results.push([randomLat, randomLng]);
-	  
-    }
-  console.log(this.results[2]);
-  }
  
-   callvideo(){
   
-  alert("open video");
-  this.IsHidden= !this.IsHidden;
- // this.redClassBool = !this.redClassBool
- // this.width=value.srcElement.style['400px'];
-  }
   
   
   
   
   constructor(private http:Http) { 
    this.showHide = true;
-   
+   this.showTable=false;
+   this.showGraph=true;
  
-  // var temp = this;
-   //var counter = 1;
-  // var xvy;
-  // result:any;
- 
- 
- this.http.get('assets/latlongdata.json').map((res: Response) => res.json()).subscribe(res => this.result = res);
- 
-      //let obj:any=this.fun().subscribe(res => this.result = res);
- 
-  // console.log(this.result);
-   
- // var abc= finalResponse ;
- //console.log(for i =0; i<=this.result; i++);
-     //   var myTimeOut = setInterval(()=>{ alert("hi"); counter++; if(counter == 12){ clearInterval(myTimeOut)} }, 4000);
-    
-   
-   
-   
   }
-  
-  
- 
-  
-  
-  
- 
-  ngOnInit() {
 
+  ngOnInit() {
+var latarray = [42.85,43.85,44.85];
+var longarray =[-94.65,-111.65,-118.65];
+var directionsService = new google.maps.DirectionsService;
+var directionsDisplay = new google.maps.DirectionsRenderer;
+var map = new google.maps.Map(document.getElementById('map'), {
+zoom: 7,
+center: {lat: 41.85, lng: -87.65}
+});
+
+directionsDisplay.setMap(map);
+calculateAndDisplayRoute(directionsService, directionsDisplay);
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+var waypts = [];
+var iLat : any = 41.85;
+var iLng : any = -87.65;
+//another code
+var k =0;
+var interval = setInterval(function () {
+var   iLat:number = latarray[k];
+var iLng:number = longarray[k];
+waypts.push({
+location: new google.maps.LatLng(iLat, iLng),
+stopover: true
+});
+directionsService.route({
+origin: {lat: 41.85, lng: -87.65},
+destination: {lat: iLat, lng: iLng},
+waypoints: waypts,
+optimizeWaypoints: true,
+travelMode: 'DRIVING'
+}, function(response, status) {
+ if (status === 'OK') {
+directionsDisplay.setDirections(response);
+} else {
+window.alert('Directions request failed due to ' + status);
+}
+});
+k++;
+if (k == 3) clearInterval(interval);
+}, 2000);	
+
+}
  
  } 
+  toggleTable()
+  {
+  this.showTable=false;
+  this.showGraph=true;
+  }
   
-  
-  
+  toggleGraph()
+  {
+  this.showTable=true;
+  this.showGraph=false;
+  }
   
   public lineChartData:Array<any> = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-    {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
+    {data: [10, 10.5, 10.8, 20, 20.4, 20.9, 100], label: 'Distance'},
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Speed'},
+  
+	{data: [18, 48, 77, 9, 100, 27, 40], label: 'Tractive Effort (in LBS)'},
+	{data: [82, 83, 84, 85, 86, 87, 88], label: 'EAB BP Pressure'},
+	{data: [255, 256, 257, 258, 259, 215, 225], label: 'EOT BP Pressure'},
+	{data: [72, 71, 72, 73, 74, 75, 76], label: 'EAB BC Pressure'}
   ];
-  public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartLabels:Array<any> = ['2/6/2017 10:14:00 PM', '2/6/2017 10:15:00 PM', '2/6/2017 10:16:00 PM', '2/6/2017 10:17:00 PM', '2/6/2017 10:18:00 PM', '2/6/2017 10:19:00 PM', '2/6/2017 10:20:00 PM'];
   public lineChartOptions:any = {
     responsive: true
   };
   public lineChartColors:Array<any> = [
     {  
-      backgroundColor: 'rgba(148,159,177,0.2)',
+      backgroundColor: '#FFF',
       borderColor: 'rgba(148,159,177,1)',
       pointBackgroundColor: 'rgba(148,159,177,1)',
       pointBorderColor: '#fff',
@@ -107,7 +108,7 @@ IsHidden = false;
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     },
     {  
-      backgroundColor: 'rgba(77,83,96,0.2)',
+      backgroundColor: '#FFF',
       borderColor: 'rgba(77,83,96,1)',
       pointBackgroundColor: 'rgba(77,83,96,1)',
       pointBorderColor: '#fff',
@@ -115,38 +116,41 @@ IsHidden = false;
       pointHoverBorderColor: 'rgba(77,83,96,1)'
     },
     {  
-      backgroundColor: 'rgba(148,159,177,0.2)',
+      backgroundColor: '#FFF',
+      borderColor: 'rgba(148,159,177,1)',
+      pointBackgroundColor: 'rgba(148,159,177,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    },
+	 {  
+      backgroundColor: '#FFF',
+      borderColor: 'rgba(148,159,177,1)',
+      pointBackgroundColor: 'rgba(148,159,177,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    },
+	 {  
+      backgroundColor: '#FFF',
+      borderColor: 'rgba(148,159,177,1)',
+      pointBackgroundColor: 'rgba(148,159,177,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    },
+	 {  
+      backgroundColor: '#FFF',
       borderColor: 'rgba(148,159,177,1)',
       pointBackgroundColor: 'rgba(148,159,177,1)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     }
+	
   ];
   public lineChartLegend:boolean = true;
   public lineChartType:string = 'line';
- 
-  public randomize():void {
-    let _lineChartData:Array<any> = new Array(this.lineChartData.length);
-    for (let i = 0; i < this.lineChartData.length; i++) {
-      _lineChartData[i] = {data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label};
-      for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-        _lineChartData[i].data[j] = Math.floor((Math.random() * 100) + 1);
-      }
-    }
-    this.lineChartData = _lineChartData;
-  }
- 
-  
-  public chartClicked(e:any):void {
-    console.log(e);
-  }
- 
-  public chartHovered(e:any):void {
-    console.log(e);
-  }
-  
-
   
 }
 

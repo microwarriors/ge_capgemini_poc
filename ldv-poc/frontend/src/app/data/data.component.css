@@ -26,3 +26,17 @@ float :right;
 	width:300px;
 	heifth:300px;
 }
+ .mar-top-40
+ {
+	 margin-top:40px;
+	 
+ }
+ 
+ @media (min-width: 1200px)
+ {
+	 
+
+.container {
+    width: 1300px;
+}
+ }
