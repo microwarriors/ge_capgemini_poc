@@ -111,3 +111,24 @@ font: bold 1.1em sans-serif;
 .disabled 
 { cursor: not-allowed; 
 }
+.pad-l-0
+{
+    padding-left:0px;
+}
+
+.pad-r-0
+{
+    padding-right: 0px;
+}
+
+input.rem
+{
+    border-top:0px;
+}
+
+.bottomBorder
+{
+    border-bottom:2px solid #D5D5D5;
+}
+
+

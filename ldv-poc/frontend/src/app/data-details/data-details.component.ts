@@ -11,6 +11,8 @@ import 'rxjs/add/operator/catch';
 })
 export class DataDetailsComponent implements OnInit {
  data: any;  
+ ckB:any;
+
  fileData :any;
  hideDetails:boolean=true;
  showTable:boolean=false;
@@ -22,6 +24,7 @@ export class DataDetailsComponent implements OnInit {
 @ViewChild('fileInput') myFileInput: any;
   
   constructor(private http: Http) { 
+
   this.hideDetails=true;
      this.showTable=false;
        this.fileData=this.getData().subscribe(data=>this.fileData=data);
@@ -46,6 +49,8 @@ export class DataDetailsComponent implements OnInit {
  {
      //console.log(this.myFileInput.nativeElement.files);
      this.myFileInput.nativeElement.value="";
+     console.log(this.ckB);
+
  }
  
  getTable()
@@ -62,10 +67,13 @@ export class DataDetailsComponent implements OnInit {
   
  fileUpload(event) {
     let fileList: FileList = event.target.files;
+      console.log(this.ckB);
     if(fileList.length > 0) {
         let file: File = fileList[0];
         let formData:FormData = new FormData();
         formData.append('uploadFile', file, file.name);
+         formData.append('fileType', this.ckB);
+         console.log(formData);
         let headers = new Headers();
         headers.append('Content-Type', 'multipart/form-data');
         headers.append('Accept', 'application/json');
