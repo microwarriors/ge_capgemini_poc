@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @RestController
 public class ListController {
@@ -27,7 +27,7 @@ public class ListController {
 	}
 	
 	@RequestMapping(value = "/api/locoData", method = RequestMethod.POST)
-	public void handleLocoData(@RequestParam("uploadFile") MultipartFile file, MultipartHttpServletRequest request, HttpServletResponse response){
+	public void handleLocoData(@RequestParam("uploadFile") MultipartFile file,@RequestParam("fileType") String fileType, HttpServletRequest request, HttpServletResponse response){
 	
 		
 		try {

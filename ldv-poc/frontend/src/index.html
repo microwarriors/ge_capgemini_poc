@@ -8,9 +8,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="node_modules/chart.js/src/chart.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBli14IYUYuWrKb0hicJVvSWlUTdwcOWoU" async defer></script>
+      <script type="text/javascript" src="./assets/js/fusioncharts.js"></script>
+<script type="text/javascript" src="./assets/js/themes/fusioncharts.theme.fint.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script type="text/javascript">
+      FusionCharts.ready(function(){
+      var revenueChart = new FusionCharts({
+        "type": "msline",
+        "renderAt": "chartContainer",
+        "width": "100%",
+        "height": "300",
+        "dataFormat": "json",
+        "dataSource": {
+    "chart": {
+        "caption": "Real-Time Locomotive Data",
+        "xAxisname": "Date And Time",
+        "yAxisName": "Values",
+        "numberPrefix": "",
+        "plotFillAlpha": "80",
+        "paletteColors": "#0075c2,#1aaf5d",
+        "baseFontColor": "#333333",
+        "baseFont": "Helvetica Neue,Arial",
+        "captionFontSize": "14",
+        "subcaptionFontSize": "14",
+        "subcaptionFontBold": "0",
+        "showBorder": "0",
+        "bgColor": "#ffffff",
+        "showShadow": "0",
+        "canvasBgColor": "#ffffff",
+        "canvasBorderAlpha": "0",
+        "divlineAlpha": "100",
+        "divlineColor": "#999999",
+        "divlineThickness": "1",
+        "divLineIsDashed": "1",
+        "divLineDashLen": "1",
+        "divLineGapLen": "1",
+        "usePlotGradientColor": "0",
+        "showplotborder": "0",
+        "valueFontColor": "#ffffff",
+        "placeValuesInside": "1",
+        "showHoverEffect": "1",
+        "rotateValues": "1",
+        "showXAxisLine": "1",
+        "xAxisLineThickness": "1",
+        "xAxisLineColor": "#999999",
+        "showAlternateHGridColor": "0",
+        "legendBgAlpha": "0",
+        "legendBorderAlpha": "0",
+        "legendShadow": "0",
+        "legendItemFontSize": "10",
+        "legendItemFontColor": "#666666"
+    },
+    "categories": [
+        {
+            "category": [
+                {
+                    "label": "2/6/2017 10:14:00 PM"
+                },
+                {
+                    "label": "2/6/2017 10:15:00 PM"
+                },
+                {
+                    "label": "2/6/2017 10:16:00 PM"
+                },
+                {
+                    "label": "2/6/2017 10:17:00 PM"
+                },
+                {
+                    "label": "2/6/2017 10:18:00 PM"
+                },
+                {
+                    "label": "2/6/2017 10:19:00 PM"
+                },
+                {
+                    "label": "2/6/2017 10:20:00 PM"
+                }
+            ]
+        }
+    ],
+    "dataset": [
+        {
+            "seriesname": "Distance",
+            "data": [
+                {
+                    "value": "50"
+                },
+                {
+                    "value": "10.5"
+                },
+                {
+                    "value": "10.8"
+                },
+                {
+                    "value": "20"
+                },
+                {
+                    "value": "20.4"
+                },
+                {
+                    "value": "20.9"
+                },
+                {
+                    "value": "80"
+                }
+            ]
+        },
+        {
+            "seriesname": "Speed",
+            "data": [
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "48"
+                },
+                {
+                    "value": "40"
+                },
+                {
+                    "value": "19"
+                },
+                {
+                    "value": "86"
+                },
+                {
+                    "value": "27"
+                },
+                {
+                    "value": "80"
+                }
+
+            ]
+        },
+        {
+            "seriesname": "Tractive Effort (in LBS)",
+            "data": [
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "48"
+                },
+                {
+                    "value": "40"
+                },
+                {
+                    "value": "19"
+                },
+                {
+                    "value": "86"
+                },
+                {
+                    "value": "27"
+                },
+                {
+                    "value": "80"
+                }
+
+            ]
+        },
+        {
+            "seriesname": "EAB BP Pressure",
+            "data": [
+                {
+                    "value": "28"
+                },
+                {
+                    "value": "50"
+                },
+                {
+                    "value": "68"
+                },
+                {
+                    "value": "19"
+                },
+                {
+                    "value": "86"
+                },
+                {
+                    "value": "27"
+                },
+                {
+                    "value": "80"
+                }
+
+            ]
+        },
+        {
+            "seriesname": "EOT BP Pressure",
+            "data": [
+                {
+                    "value": "10"
+                },
+                {
+                    "value": "22"
+                },
+                {
+                    "value": "51"
+                },
+                {
+                    "value": "15"
+                },
+                {
+                    "value": "86"
+                },
+                {
+                    "value": "27"
+                },
+                {
+                    "value": "80"
+                }
+
+            ]
+        },
+        {
+            "seriesname": "EAB BC Pressure",
+            "data": [
+                {
+                    "value": "70"
+                },
+                {
+                    "value": "48"
+                },
+                {
+                    "value": "11"
+                },
+                {
+                    "value": "19"
+                },
+                {
+                    "value": "22"
+                },
+                {
+                    "value": "27"
+                },
+                {
+                    "value": "80"
+                }
+
+            ]
+        }
+    ]
+}
+    });
+
+    revenueChart.render();
+})
+      </script>
 </body>
 </html>

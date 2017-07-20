@@ -30,7 +30,9 @@
   </div>
   </div>
   <div class="row">
-  <div class="col-md-12" *ngIf="showGraph">
+ <!-- <div class="col-md-12" *ngIf="showGraph">
+
+    
     <div style="display: block;">
     <canvas baseChart width="500" height="150"
                 [datasets]="lineChartData"
@@ -42,7 +44,11 @@
                 (chartHover)="chartHovered($event)"
                 (chartClick)="chartClicked($event)"></canvas>
     </div>
-  </div>
+
+</div>-->
+    <div id="chartContainer" class="col-md-12" *ngIf="showGraph">FusionCharts XT will load here!</div>
+    
+  
  
   <div class="col-md-12" style="margin-bottom: 10px" *ngIf="showTable">
     <table class="table table-responsive table-condensed">
