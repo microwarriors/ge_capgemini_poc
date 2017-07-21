@@ -24,6 +24,8 @@
     "@angular/router": "^4.0.0",
     "angular-2-data-table": "^0.1.2",
     "angular2-datatable": "^0.6.0",
+    "angular2-fusioncharts": "^1.0.2-rc.4",
+    "angular2-highcharts": "^0.5.5",
     "bootstrap": "^3.3.7",
     "chart.js": "^2.6.0",
     "core-js": "^2.4.1",

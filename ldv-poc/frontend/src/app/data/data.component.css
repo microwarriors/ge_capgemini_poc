@@ -11,6 +11,9 @@
 .no-bullets {
     list-style-type: none;
 }
+#singleVideo{
+	border:1px solid;
+}
 
 	 agm-map {
   height: 355px;
@@ -28,7 +31,7 @@ float :right;
 }
  .mar-top-40
  {
-	 margin-top:40px;
+	 margin-top:7px;
 	 
  }
  
@@ -39,4 +42,22 @@ float :right;
 .container {
     width: 1300px;
 }
+ }
+ #chartTable{
+ margin-top:15px;
+ }
+
+ table tr td 
+ {
+	 line-height: 9px;
+ }
+
+  table tr th
+ {
+	 line-height: 10px;
+ }
+
+ .pagination{
+	 padding-bottom: 0px;
+  
  }

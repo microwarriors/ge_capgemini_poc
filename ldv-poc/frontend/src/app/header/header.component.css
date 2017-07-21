@@ -1,9 +1,15 @@
 .navbar {
     position: none !important;
+	color:#a8bddd;
 }
 @media (min-width: 1200px)
 {
 .container {
     width: 1319px;
 }
+}
+
+ul.nav li
+{
+    font-size: 18px;
 }

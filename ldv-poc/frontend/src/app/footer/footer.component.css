@@ -11,9 +11,20 @@
 @media (min-width: 1200px)
 {
 .container {
-    width: 1319px;
-	background-color:#025090;
+  
+	
 	margin-top:20px;
 	
 }
 }
+.footerColor
+{
+background-color:#025090;
+margin:0px;
+}
+
+ul.nav li a
+{
+  color: aliceblue;
+}
+  

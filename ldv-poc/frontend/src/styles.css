@@ -48,7 +48,7 @@ background-color:#e5e5e5 !important;
   width: 50%;
   height: 400px;
   position: absolute;
-  background: #e0ebeb;
+
   
 	
 }
@@ -58,11 +58,11 @@ background-color:#e5e5e5 !important;
   width: 50%;
   position: relative;
   height: 400px;
-  background: #e0ebeb;
+  
 	
 }
 .buttonclass{
-	margin-top:5px;
+	margin-top:7px;
 	margin-bottom:5px;
 	float:right;
 }

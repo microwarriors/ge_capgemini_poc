@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DataComponent } from './data/data.component';
@@ -23,6 +24,10 @@ import {DataTableModule} from "angular2-datatable";
 import { DataFilterPipe }   from './table.pipe';
 
 
+
+ 
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 	{ path: 'login', component: LoginComponent },
@@ -36,14 +41,15 @@ const routes: Routes = [
     HeaderComponent,
     DataComponent,
     DataDetailsComponent,
-    FooterComponent,
+  FooterComponent,
     LoginComponent,
 	DataFilterPipe
-	
+
   ],
   imports: [
     BrowserModule,
 	   RouterModule.forRoot(routes),
+     
 	   HttpModule,
 	   FormsModule,
 	   ReactiveFormsModule,

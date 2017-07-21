@@ -14,9 +14,13 @@ export class DataComponent implements OnInit {
   result:any;
  showTable:boolean=true;
  showGraph:boolean=false;
+ data:any;
    public  localVar:any;
- 
-  
+ linedata:Object;
+  public filterQuery = "";
+    public rowsOnPage = 10;
+    public sortBy = "email";
+    public sortOrder = "asc";
   
   
   
@@ -25,9 +29,17 @@ export class DataComponent implements OnInit {
    this.showHide = true;
    this.showTable=false;
    this.showGraph=true;
- 
+   this.linedata = {
+      chart: { },
+      linedata: [
+        {value: 500},
+        {value: 600},
+        {value: 700}
+      ]
+    };
+  
   }
-
+  
   ngOnInit() {
 var latarray = [42.85,43.85,44.85];
 var longarray =[-94.65,-111.65,-118.65];
@@ -36,8 +48,14 @@ var directionsDisplay = new google.maps.DirectionsRenderer;
 var map = new google.maps.Map(document.getElementById('map'), {
 zoom: 7,
 center: {lat: 41.85, lng: -87.65}
-});
 
+
+});
+ this.http.get("assets/tableData.json")
+  .map((response: Response) => response.json())
+            .subscribe(data=> {
+                this.data = data
+            });
 directionsDisplay.setMap(map);
 calculateAndDisplayRoute(directionsService, directionsDisplay);
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {

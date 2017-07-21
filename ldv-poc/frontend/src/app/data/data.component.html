@@ -1,8 +1,8 @@
-<div class ="container mainComponent" style="border:1px solid #cecece;">
+<div class ="container " >
 	<div class ="row">
-		  <div class ="col-md-6 col-sm-6 firstdiv "  >
+		  <div class ="col-md-6 col-sm-6  " style="margin-top:10px;padding-right: 0px!important; padding-left: 0px!important;" >
     
-	   <div class="video" style="height: 300px;"  >
+	   <div class="video" style="height: 200px;"  >
 	   <vg-player>
          <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
           <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
@@ -10,12 +10,13 @@
        </vg-player>
 	     </div>
        </div>
-	    <div class ="col-md-6 col-sm-6 seconddiv" >
+	    <div class ="col-md-6 col-sm-6 " style="margin-top:10px;padding-right: 0px!important; padding-left: 0px!important;">
        <div class="map" >
-	  <div id="map" style="height: 300px;"></div>
+	  <div id="map" style="height: 200px;"></div>
 	 </div>
   </div>
-  
+  </div>
+  <div class="row">
   <div class =" buttonclass">
   
   <button type="button"  class="btn btn-primary">video</button>
@@ -23,13 +24,18 @@
   <button type="button" class="btn btn-primary">marker</button>
   </div>
   
-  <div class=" mar-top-40">
-  <div class="">
+
+  </div>
+
+  <div class="row">
+    
   <button type="button" class="btn btn-primary" (click)="toggleGraph()">Table</button>
     <button type="button" class="btn btn-primary" (click)="toggleTable()">Graph</button>
-  </div>
-  </div>
-  <div class="row">
+ 
+
+    </div>
+  
+  <div class="row" id="">
  <!-- <div class="col-md-12" *ngIf="showGraph">
 
     
@@ -46,26 +52,81 @@
     </div>
 
 </div>-->
-    <div id="chartContainer" class="col-md-12" *ngIf="showGraph">FusionCharts XT will load here!</div>
-    
-  
+    <div id="chartContainer" class="col-sm-12 col-md-12" *ngIf="showGraph">Charts will load here!</div>
  
-  <div class="col-md-12" style="margin-bottom: 10px" *ngIf="showTable">
-    <table class="table table-responsive table-condensed">
-      <tr>
-       <td>Time Stamp </td> <th *ngFor="let label of lineChartLabels">{{label}}</th>
-      </tr>
-	  
-      <tr *ngFor="let d of lineChartData">
-      <td> {{d.label}}</td>  <td *ngFor="let label of lineChartLabels;let j=index">{{d && d.data[j]}}</td>
-      </tr>
-	   
-    </table>
-   
-  </div>  
+  <div class="mar-topNeg-20" *ngIf="showTable">
+
+        <div class="row">
+          
+      
+            
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">File Details</div>
+
+            <table class="table table-striped" [mfData]="data | dataFilter : filterQuery" #mf="mfDataTable"
+                   [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+                <thead>
+                <tr>
+                   <!-- <th style="width: 10%"></th>-->
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter by="time">Time Stamp</mfDefaultSorter>
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter by="distance">Distance</mfDefaultSorter>
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter by="speed">Speed</mfDefaultSorter>
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter [by]="sortByWordLength">Tractive Effort Total</mfDefaultSorter>
+                    </th>
+                     <th class="col-sm-2 text-center">
+                        <mfDefaultSorter [by]="sortByWordLength">EAB BP Pressure</mfDefaultSorter>
+                    </th>
+                     
+                     <th class="col-sm-2 text-center">
+                        <mfDefaultSorter [by]="sortByWordLength">EOT BP Pressure</mfDefaultSorter>
+                    </th>
+                      <!--  <th >
+                        <mfDefaultSorter [by]="sortByWordLength">EAB BC Pressure</mfDefaultSorter>
+                    </th>-->
+                </tr>
+              <!--  <tr>
+                    <th colspan="5">
+                        Filter by name:
+                        <input class="form-control" [(ngModel)]="filterQuery"/>
+                    </th>
+                </tr>-->
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mf.data">
+                    <!--<td>
+                        <button (click)="remove(item)" class="btn btn-danger">x</button>
+                    </td>-->
+                    <td class="col-sm-2 text-center">{{item.ts}}</td>
+                    <td class="col-sm-2 text-center">{{item.distance}}</td>
+                    <td class="col-sm-2 text-center">{{item.speed}}</td>
+                    <td class="col-sm-2 text-center">{{item.tet}}</td>
+                      <td class="col-sm-2 text-center">{{item.eab }}</td>
+                        <td class="col-sm-2 text-center">{{item.eot }}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="6" class="">
+                        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+       
+    </div>
 </div>
  
  
+
 </div>
 
 
