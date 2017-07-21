@@ -13,11 +13,11 @@ import com.ge.vo.FraDataList;
 @EnableDiscoveryClient
 public class LdvApplication {
 
-	private static Logger logger = Logger.getLogger(LdvApplication.class.getName());
+	//private static Logger logger = Logger.getLogger(LdvApplication.class.getName());
 
 	public static void main(String[] args) {
 		SpringApplication.run(LdvApplication.class, args);
-		FraDataList fraDataList = new RestTemplate().getForObject("http://din80015186.corp.capgemini.com:2222/getFra",
+		/*FraDataList fraDataList = new RestTemplate().getForObject("http://din80015186.corp.capgemini.com:2222/getFra",
 				FraDataList.class);
 		logger.info("*********Data rcvd*************");
 		logger.info("StartTime : " + fraDataList.getStartTime());
@@ -26,6 +26,6 @@ public class LdvApplication {
 		logger.info("EabBcPressure : " + fraDataList.getFraData().get(0).getEabBcPressure());
 		logger.info("EabBPPressure : " + fraDataList.getFraData().get(0).getEabBPPressure());
 		logger.info("Speed : " + fraDataList.getFraData().get(0).getSpeed());
-		logger.info("TimeStamp : " + fraDataList.getFraData().get(0).getTimeStamp());
+		logger.info("TimeStamp : " + fraDataList.getFraData().get(0).getTimeStamp());*/
 	}
 }
