@@ -54,7 +54,7 @@
 }
 .nice-list
 {
-line-height: 31px;
+line-height: 18px;
 }
 
 .mar-top-80
@@ -129,6 +129,24 @@ input.rem
 .bottomBorder
 {
     border-bottom:2px solid #D5D5D5;
+
 }
+
+.bottomBorderChkbx
+{
+    border-bottom:2px solid #D5D5D5;
+    width:84%;
+}
+
+.lineHeight
+{
+    line-height: 17px;
+}
+
+.mar-top-84
+{
+    margin-top:84px;
+}
+
 
 
