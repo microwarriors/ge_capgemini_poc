@@ -14,9 +14,13 @@ export class DataComponent implements OnInit {
   result:any;
  showTable:boolean=true;
  showGraph:boolean=false;
+ data:any;
    public  localVar:any;
  linedata:Object;
- 
+  public filterQuery = "";
+    public rowsOnPage = 10;
+    public sortBy = "email";
+    public sortOrder = "asc";
   
   
   
@@ -44,8 +48,14 @@ var directionsDisplay = new google.maps.DirectionsRenderer;
 var map = new google.maps.Map(document.getElementById('map'), {
 zoom: 7,
 center: {lat: 41.85, lng: -87.65}
-});
 
+
+});
+ this.http.get("assets/tableData.json")
+  .map((response: Response) => response.json())
+            .subscribe(data=> {
+                this.data = data
+            });
 directionsDisplay.setMap(map);
 calculateAndDisplayRoute(directionsService, directionsDisplay);
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {

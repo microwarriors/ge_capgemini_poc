@@ -46,3 +46,18 @@ float :right;
  #chartTable{
  margin-top:15px;
  }
+
+ table tr td 
+ {
+	 line-height: 9px;
+ }
+
+  table tr th
+ {
+	 line-height: 10px;
+ }
+
+ .pagination{
+	 padding-bottom: 0px;
+  
+ }

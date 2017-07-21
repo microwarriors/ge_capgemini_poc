@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { DataComponent } from './data/data.component';
 import { RouterModule,Routes }   from '@angular/router';
 import { DataDetailsComponent } from './data-details/data-details.component';
-//import { FooterComponent } from './footer/footer.component';-->
+import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule ,ReactiveFormsModule}   from '@angular/forms';
 import {VgCoreModule} from 'videogular2/core';
@@ -41,7 +41,7 @@ const routes: Routes = [
     HeaderComponent,
     DataComponent,
     DataDetailsComponent,
-  //  FooterComponent,
+  FooterComponent,
     LoginComponent,
 	DataFilterPipe
 
