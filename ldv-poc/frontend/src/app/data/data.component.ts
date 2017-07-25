@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef } from '@angular/core';
 
 import {Http, Response} from '@angular/http'
 declare var google: any;
@@ -8,13 +8,17 @@ declare var google: any;
   styleUrls: ['./data.component.css']
 })
 export class DataComponent implements OnInit {
-
+ // <-- Define the private member which will hold the d3 reference
+  private parentNativeElement: any;
  name:string;
+   options: any;
+
   showHide:boolean =false;
   result:any;
  showTable:boolean=true;
  showGraph:boolean=false;
  data:any;
+
    public  localVar:any;
  linedata:Object;
   public filterQuery = "";
@@ -29,18 +33,26 @@ export class DataComponent implements OnInit {
    this.showHide = true;
    this.showTable=false;
    this.showGraph=true;
-   this.linedata = {
-      chart: { },
-      linedata: [
-        {value: 500},
-        {value: 600},
-        {value: 700}
-      ]
-    };
+
+    this.options = {
+            title : { text : 'Locomotive Data' },
+            series: [
+                {name: 'Speed',data: [29.9, 71.5, 106.4, 112.2]},
+                {data: [29.9, 1.5, 1.4, 12.2]},
+                {data: [12.9, 11.5, 1.4, 18.2]},
+                  {data: [14.9, 18.5, 11.4, 18.2]}
+               
+                
+            ]
+        };
+        console.log(this.options.series[1].data);
+     
+
   
   }
   
   ngOnInit() {
+
 var latarray = [42.85,43.85,44.85];
 var longarray =[-94.65,-111.65,-118.65];
 var directionsService = new google.maps.DirectionsService;

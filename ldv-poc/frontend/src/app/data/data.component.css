@@ -61,3 +61,8 @@ float :right;
 	 padding-bottom: 0px;
   
  }
+chart {
+    width: 100% !important;
+    margin: 0 auto;
+    display: block;
+}

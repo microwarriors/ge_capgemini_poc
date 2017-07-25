@@ -36,23 +36,12 @@
     </div>
   
   <div class="row" id="">
- <!-- <div class="col-md-12" *ngIf="showGraph">
-
+ <div class="col-md-12" *ngIf="showGraph">
+             <chart [options]="options" ></chart>
     
-    <div style="display: block;">
-    <canvas baseChart width="500" height="150"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
-    </div>
 
-</div>-->
-    <div id="chartContainer" class="col-sm-12 col-md-12" *ngIf="showGraph">Charts will load here!</div>
+</div>
+ <!--   <div id="chartContainer" class="col-sm-12 col-md-12" *ngIf="showGraph">Charts will load here!</div>-->
  
   <div class="mar-topNeg-20" *ngIf="showTable">
 

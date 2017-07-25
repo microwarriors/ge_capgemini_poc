@@ -23,7 +23,7 @@ import { AgmCoreModule } from '@agm/core';
 import {DataTableModule} from "angular2-datatable";
 import { DataFilterPipe }   from './table.pipe';
 
-
+import { ChartModule } from 'angular2-highcharts';
 
  
 
@@ -49,10 +49,11 @@ const routes: Routes = [
   imports: [
     BrowserModule,
 	   RouterModule.forRoot(routes),
-     
+      ChartModule.forRoot(require('highcharts')),
 	   HttpModule,
 	   FormsModule,
 	   ReactiveFormsModule,
+     
 	    VgCoreModule,
         VgControlsModule,
         VgOverlayPlayModule,
@@ -63,6 +64,7 @@ const routes: Routes = [
 		AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBli14IYUYuWrKb0hicJVvSWlUTdwcOWoU'
     })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
