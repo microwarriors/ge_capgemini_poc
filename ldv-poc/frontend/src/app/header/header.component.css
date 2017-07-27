@@ -22,8 +22,13 @@ ul.nav li a
   
     color:#fff;
 }
-  ul.nav li a:focus,ul.nav li a:hover
+  ul.nav li a:focus,ul.nav li a:hover,ul.nav li a:active
 {
-  
+    background-color: #eff0f1;
     color:#000;
+     text-shadow: 2px 2px 2px #555;
+    border-right:1px solid #191970;
+    border-bottom: 2px solid red;
+   padding-bottom:13px;
 }
+ 

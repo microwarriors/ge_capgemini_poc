@@ -17,7 +17,7 @@ fileData :any;
  hideDetails:boolean=true;
  showTable:boolean=false;
  public filterQuery = "";
-    public rowsOnPage = 10;
+    public rowsOnPage = 5;
     public sortBy = "email";
     public sortOrder = "asc";
 
