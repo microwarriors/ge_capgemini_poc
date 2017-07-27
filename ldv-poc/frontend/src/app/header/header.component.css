@@ -12,4 +12,18 @@
 ul.nav li
 {
     font-size: 18px;
+ 
+}
+h3{
+font-size: 18px;
+}
+ul.nav li a
+{
+  
+    color:#fff;
+}
+  ul.nav li a:focus,ul.nav li a:hover
+{
+  
+    color:#000;
 }
