@@ -1,0 +1,423 @@
+<div class="container ">
+
+<!-- below div for hiding-->
+<div class="" *ngIf="hideDetails">
+<div class="row mar-top-10">
+<div class="col-sm-12 col-blue">
+<h3>Locomotive Data</h3>
+<div class="headingBorder"></div>
+</div>
+</div>
+
+
+
+<div class="bottomBorder"></div>
+</div>
+
+
+<div class="row mar-top-10">
+
+<!-- below div for hiding-->
+<div class="" *ngIf="hideDetails">
+<div class="col-sm-4">
+
+
+<div class="row mar-top-10">
+<div class="col-sm-12 ">
+<span class="labelFontCol">Select below to upload file</span>
+</div>
+</div>
+
+<div class="row mar-top-10">
+<div class="col-sm-12">
+<label class="labelFontZero"><input  type="radio" value="fra" [(ngModel)]="ckB" (change)="removeUloadedFile()"/> FRA Data</label>
+<label class="labelFontZero"><input  type="radio"  value="ptc" [(ngModel)]="ckB"  (change)="removeUloadedFile()"/> PTC Data</label>
+<label class="labelFontZero"><input  type="radio"   value="locoVideo" [(ngModel)]="ckB"  (change)="removeUloadedFile()"/> Locomotive Video Data</label>
+
+</div>
+</div>
+<div class="bottomBorderChkbx"></div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+<span class=""><input #fileInput type="file" name=Select (change)="fileUpload($event)" [disabled]="ckB==null" accept=".xml"></span>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+  <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Start Time/Date</span>
+</div>
+ <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.sd"/>
+</div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">End Time/Date</span>
+    </div>
+<div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.ed"/>
+</div>
+</div>
+</div>
+
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Wheel Diameter</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.wd"/>
+    </div>
+</div>
+</div>
+
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Adjust Date Time</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.adt"/>
+    </div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+<span class="labelFontCol"><input  type="checkbox" [checked]="" (click)=getTable() value="" /> Select data to view</span>
+
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+<span class="labelFontCol"><input  type="checkbox" [checked]="" value=""/> Keep last view settings</span>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-6">
+<button type="btton" class="btn btn-primary">File Details</button>
+</div>
+</div>
+
+</div>
+
+<!--second column-->
+<div class="col-sm-3 mar-top-84">
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Wheel Diameter</span>
+    </div>
+<div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.wd"/>
+</div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Customer Name</span>
+</div>
+<div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.custName"/>
+</div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Serial Number</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.sNo"/>
+    </div>
+</div>
+</div>
+
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Name</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.name"/>
+    </div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Version</span>
+    </div>
+    <div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.version"/>
+    </div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">Start Time/Date</span>
+    </div>
+    <div class="col-sm-5 pad-l-0">  
+<input type="text" class="rem" [(ngModel)]="fileData.sd"/>
+    </div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-12">
+    <div class="col-sm-5 pad-l-0 pad-r-0">  
+<span class="labelFontCol">End Time/Date</span>
+    </div>
+    <div class="col-sm-5 pad-l-0 ">  
+<input type="text" class="rem" [(ngModel)]="fileData.ed"/>
+    </div>
+</div>
+</div>
+
+<div class="row mar-top-15">
+<div class="col-sm-3">
+<button type="button"  class="btn btn-primary">Next</button>
+
+</div>
+
+<div class="col-sm-3">
+<button type="button"  class="btn btn-primary">Save</button>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<!--initially table would be hidden-->
+<div class="" *ngIf="showTable">
+    <div class="col-sm-7 mar-topNeg-20">
+
+        <div class="page-header col-blue">
+          
+                <h3>FRA Data</h3>
+            
+        </div>
+
+
+        <div class="row">
+          
+      <div class="col-xs-2">
+                <label class="label-control">Rows on page</label>
+                <select class="form-control input-sm" [(ngModel)]="rowsOnPage">
+                    <option [ngValue]="5">5</option>
+                    <option [ngValue]="10">10</option>
+                    <option [ngValue]="15">15</option>
+                </select>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <label class="col-xs-12 label-control">Sort by</label>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <select class="form-control input-sm" [(ngModel)]="sortBy">
+                            <option ngValue="time">Time Stamp</option>
+                            <option ngValue="distance">Distance</option>
+                            <option ngValue="speed">Speed</option>
+                          <!--  <option [ngValue]="sortByWordLength">City</option>-->
+                        </select>
+                    </div>
+                </div>
+              <!-- <div class="col-xs-6">
+                    <div class="row">
+                        <select class="form-control input-sm" [(ngModel)]="sortOrder">
+                            <option ngValue="asc">Ascending</option>
+                            <option ngValue="desc">Descending</option>
+                            <option ngValue="badValue">Bad value</option>
+                        </select>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">File Details</div>
+
+            <table class="table table-striped" [mfData]="data | dataFilter : filterQuery" #mf="mfDataTable"
+                   [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+                <thead>
+                <tr>
+                   <!-- <th style="width: 10%"></th>-->
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter by="time">Time Stamp</mfDefaultSorter>
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter by="distance">Distance</mfDefaultSorter>
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter by="speed">Speed</mfDefaultSorter>
+                    </th>
+                    <th class="col-sm-2 text-center">
+                        <mfDefaultSorter [by]="sortByWordLength">Tractive Effort Total</mfDefaultSorter>
+                    </th>
+                     <th class="col-sm-2 text-center">
+                        <mfDefaultSorter [by]="sortByWordLength">EAB BP Pressure</mfDefaultSorter>
+                    </th>
+                     
+                     <th class="col-sm-2 text-center">
+                        <mfDefaultSorter [by]="sortByWordLength">EOT BP Pressure</mfDefaultSorter>
+                    </th>
+                      <!--  <th >
+                        <mfDefaultSorter [by]="sortByWordLength">EAB BC Pressure</mfDefaultSorter>
+                    </th>-->
+                </tr>
+              <!--  <tr>
+                    <th colspan="5">
+                        Filter by name:
+                        <input class="form-control" [(ngModel)]="filterQuery"/>
+                    </th>
+                </tr>-->
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mf.data">
+                    <!--<td>
+                        <button (click)="remove(item)" class="btn btn-danger">x</button>
+                    </td>-->
+                    <td class="col-sm-2 text-center">{{item.ts}}</td>
+                    <td class="col-sm-2 text-center">{{item.distance}}</td>
+                    <td class="col-sm-2 text-center">{{item.speed}}</td>
+                    <td class="col-sm-2 text-center">{{item.tet}}</td>
+                      <td class="col-sm-2 text-center">{{item.eab }}</td>
+                        <td class="col-sm-2 text-center">{{item.eot }}</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class=" row col-sm-6">
+      <button type="button" (click)="hideTable()" class="btn btn-primary">Back</button>
+      </div>
+    </div>
+    
+</div>
+<div class="">
+<!--third column -->
+
+<div class="col-sm-3 mar-topNeg-60 mar-top-15 leftBorder lineHeight">
+<div>
+        <div class="post">
+          <p><img src="./assets/powerHaul.jpg" alt="website template image" class="bordered"/></p>
+          <h3><a href="http://www.free-css.com/free-css-templates">Powerhaul Series Locomotive</a></h3>
+          <p>Driving high-tech change across the rail industry to reduce costs, streamline operations and increase performance.</p>
+          <a href="https://en.wikipedia.org/wiki/GE_PowerHaul" class="more">Read more »</a> </div>
+        <div class="content-separator"></div>
+        <div class="post">
+          <p><img src="./assets/images.jpg" alt="website template image" class="bordered"/></p>
+          <h3><a href="http://www.free-css.com/free-css-templates">Evolution Series Locomotives</a></h3>
+          <p>The Evolution locomotive is the most technologically advanced, diesel-electric, heavy-haul locomotive in the world today.</p>
+          <a href="https://en.wikipedia.org/wiki/GE_Evolution_Series" class="more">Read more »</a> </div>
+        <!-- <div class="post">
+          <p><img src="./assets/AC4400CW.jpg" alt="website template image" class="bordered"/></p>
+          <h3><a href="http://www.free-css.com/free-css-templates">AC4400 and DASH Series</a></h3>
+          <p>The Evolution locomotive is the most technologically advanced, diesel-electric, heavy-haul locomotive in the world today.</p>
+          <a href="https://en.wikipedia.org/wiki/GE_AC4400CW" class="more">Read more »</a> </div>-->
+    
+      </div>
+
+
+</div>
+<!--Fourth Column -->
+<div class="col-sm-2 mar-topNeg-60 mar-top-15 leftBorder">
+<div class="right sidebar" id="sidebar-2">
+        <div class="section">
+          <div class="section-title">
+            <div class="left">Latest News</div>
+            <div class="right"></div>
+           
+          </div>
+          <div class="section-content">
+            <ul class="nice-list">
+              <li>
+                <div class="left"><a href="">Evolution Series Locomotive</a></div>
+             
+              </li>
+              <li>
+                <div class="left"><a href="">Powerhaul Series Locomotive</a></div>
+              
+              </li>
+              <li>
+                <div class="left"><a href="">AC4400 and DASH Series</a></div>
+                
+              
+              </li>
+              <li>
+                <div class="left"><a href="">NextFuel™ Natural Gas Retrofit</a></div>
+               
+               
+              </li>
+              <li>
+                <div class="left"><a href="">Building Industry Leading Locomotives</a></div>
+              
+            
+              </li>
+              <li>
+                <div class="left"><a href="">Kazakhstan Railways adopts GE digital solutions</a></div>
+               
+              </li>
+              <li><a href="" class="more">Browse all »</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">Most Viewed</div>
+          <div class="section-content">
+            <ul class="nice-list">
+              <li> <a href="">Kazakhstan Railways adopts GE digital solutions</a></li>
+              <li><a href="">Building Industry Leading Locomotives</a></li>
+              <li> <a href="">Powerhaul Series Locomotive</a></li>
+              <li> <a href="">AC4400 and DASH Series</a></li>
+              <!--<li><a href="">Evolution Series Locomotive</a></li>
+              <li> <a href="">ET44AC</a></li>
+              <li><a href="">NextFuel™ Natural Gas Retrofit</a></li>-->
+           
+              <li><a href="http://www.free-css.com/free-css-templates" class="more">Browse all »</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+
+</div>
+</div>
+</div>
+
+<!--table-->
+
+
+</div>
+
+
+

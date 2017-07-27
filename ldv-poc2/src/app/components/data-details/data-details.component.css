@@ -1,0 +1,152 @@
+::-webkit-file-upload-button {
+
+ color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+
+.content-separator {
+    margin: 20px 0;
+	border-bottom:1px solid #D5D5D5;
+}
+.bordered
+{
+	    border: 1px solid #DDD;
+    padding: 3px;
+	    width: 250px;
+		height: 130px;
+}
+.leftBorder
+{
+	
+	color:gray;
+	border-left:1px solid #D5D5D5;
+}
+
+.section-title {
+    background-color: #F2F6FA;
+    border-top: 2px solid #ABC;
+    font: bold 1.1em sans-serif;
+    margin-bottom: 5px;
+    min-height: 0;
+    padding: 5px 8px 6px;
+}
+.nice-list
+{
+line-height: 18px;
+}
+
+.mar-top-80
+{
+	margin-top:80px;
+}
+.mar-top-15
+{
+    margin-top:15px;
+}
+
+.mar-top-10
+{
+    margin-top:10px;
+}
+
+.labelFontZero
+    {
+        font-weight: 10;
+    }
+
+    @media (min-width: 1200px)
+   { .container {
+    width: 1300px !important;
+}}
+
+.col-blue
+{
+    color:#337ab7
+}
+
+.page-header
+{
+    margin-top:0px;
+    padding-bottom:0px;
+}
+
+div.post h3
+{
+    font-size:  20px !important;
+}
+
+.mar-topNeg-20
+{
+margin-top:-20px;
+}
+
+.labelFontCol
+{
+font: bold 1.1em sans-serif;
+    color: gray;
+}
+
+.disabled 
+{ cursor: not-allowed; 
+}
+.pad-l-0
+{
+    padding-left:0px;
+}
+
+.pad-r-0
+{
+    padding-right: 0px;
+}
+
+input.rem
+{
+    border-top:0px;
+}
+
+.bottomBorder
+{
+    border-bottom:2px solid #D5D5D5;
+
+}
+
+.bottomBorderChkbx
+{
+    border-bottom:2px solid #D5D5D5;
+    width:84%;
+}
+
+.lineHeight
+{
+    line-height: 17px;
+}
+
+.mar-top-84
+{
+    margin-top:84px;
+}
+
+
+

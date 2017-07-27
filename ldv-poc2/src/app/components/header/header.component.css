@@ -1,0 +1,33 @@
+.navbar {
+    position: none !important;
+	color:#a8bddd;
+}
+@media (min-width: 1200px)
+{
+.container {
+    width: 1319px;
+}
+}
+
+ul.nav li
+{
+    font-size: 18px;
+ 
+}
+h3{
+font-size: 18px;
+}
+ul.nav li a
+{
+  
+    color:#fff;
+}
+  ul.nav li a:focus,ul.nav li a:hover,ul.nav li a:active
+{
+    background-color: #eff0f1;
+    color:#000;
+    border-right:1px solid #191970;
+    border-bottom: 2px solid red;
+   padding-bottom:13px;
+}
+ 
