@@ -22,11 +22,19 @@ import {Observable} from 'rxjs/Rx';
 import { AgmCoreModule } from '@agm/core';
 import {DataTableModule} from "angular2-datatable";
 import { DataFilterPipe }   from './table.pipe';
-
+import {DataService} from './services/data.service'
 import { ChartModule } from 'angular2-highcharts';
+import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
+    declare var require: any;
 
  
+ export function highchartsFactory() {
+      const hc = require('highcharts');
+      const dd = require('highcharts/modules/drilldown');
+      dd(hc);
 
+      return hc;
+    }
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -49,11 +57,12 @@ const routes: Routes = [
   imports: [
     BrowserModule,
 	   RouterModule.forRoot(routes),
-      ChartModule.forRoot(require('highcharts')),
+     // ChartModule.forRoot(require('highcharts')),
+     ChartModule,
 	   HttpModule,
 	   FormsModule,
 	   ReactiveFormsModule,
-     
+     ChartModule,
 	    VgCoreModule,
         VgControlsModule,
         VgOverlayPlayModule,
@@ -66,7 +75,11 @@ const routes: Routes = [
     })
     
   ],
-  providers: [],
+  providers: [
+    DataService,
+    {provide:HighchartsStatic,
+      useFactory: highchartsFactory}
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

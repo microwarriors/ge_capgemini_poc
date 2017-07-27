@@ -27,7 +27,7 @@
 
   </div>
 
-  <div class="row">
+   <div class="row" style="margin-top:-30px;margin-bottom:2px">
     
   <button type="button" class="btn btn-primary" (click)="toggleGraph()">Table</button>
     <button type="button" class="btn btn-primary" (click)="toggleTable()">Graph</button>
@@ -45,7 +45,7 @@
  
   <div class="mar-topNeg-20" *ngIf="showTable">
 
-        <div class="row">
+     <div class="row" >
           
       
             
@@ -93,7 +93,7 @@
                     <!--<td>
                         <button (click)="remove(item)" class="btn btn-danger">x</button>
                     </td>-->
-                    <td class="col-sm-2 text-center">{{item.ts}}</td>
+                    <td class="col-sm-2 text-center"><a (click)="clickedRow(item)">{{item.ts}}</a></td>
                     <td class="col-sm-2 text-center">{{item.distance}}</td>
                     <td class="col-sm-2 text-center">{{item.speed}}</td>
                     <td class="col-sm-2 text-center">{{item.tet}}</td>
@@ -104,7 +104,7 @@
                 <tfoot>
                 <tr>
                     <td colspan="6" class="">
-                        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+                         <mfBootstrapPaginator  ></mfBootstrapPaginator>
                     </td>
                 </tr>
                 </tfoot>

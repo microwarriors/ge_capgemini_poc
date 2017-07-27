@@ -3,6 +3,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-data-details',
@@ -12,8 +13,7 @@ import 'rxjs/add/operator/catch';
 export class DataDetailsComponent implements OnInit {
  data: any;  
  ckB:any;
-
- fileData :any;
+fileData :any;
  hideDetails:boolean=true;
  showTable:boolean=false;
  public filterQuery = "";
@@ -23,28 +23,26 @@ export class DataDetailsComponent implements OnInit {
 
 @ViewChild('fileInput') myFileInput: any;
   
-  constructor(private http: Http) { 
+  constructor(private http: Http,private dataService: DataService) { 
 
   this.hideDetails=true;
      this.showTable=false;
-       this.fileData=this.getData().subscribe(data=>this.fileData=data);
+      
 	   console.log(this.fileData);
 		 }
 		
 		 
   ngOnInit() {
- this.http.get("assets/tableData.json")
-  .map((response: Response) => response.json())
-            .subscribe(data=> {
-                this.data = data
-            });
+  this.dataService.getServiceDataGET("assets/tableData.json")
+            .subscribe(data=> this.data=data);
+
+  this.fileData=this.dataService.getServiceDataGET("api/ldv")
+  .subscribe(data=>this.fileData=data);
+
   }
   
-  getData()
-  {
-	  return this.http.get("api/ldv")
-                         .map((response: Response) => response.json());
-  }
+ 
+
  removeUloadedFile()
  {
      //console.log(this.myFileInput.nativeElement.files);

@@ -1,6 +1,7 @@
 import { Component, OnInit,ElementRef } from '@angular/core';
 
-import {Http, Response} from '@angular/http'
+import {Http, Response} from '@angular/http';
+import {DataService} from '../services/data.service';
 declare var google: any;
 @Component({
   selector: 'app-data',
@@ -18,57 +19,145 @@ export class DataComponent implements OnInit {
  showTable:boolean=true;
  showGraph:boolean=false;
  data:any;
+value:any;
+
+arrTime:Array<any> = [];
+  arrdistance:Array<any> = [];
+  arrspeed:Array<any> = [];
+  arrtet:Array<any> = [];
+  arreab:Array<any> = [];
+  arreot:Array<any> = [];
+
+
+latPosition:any;
+ longPosition:any;
+ position:Array<any>=[];
+ graphPosition:any;
 
    public  localVar:any;
  linedata:Object;
   public filterQuery = "";
-    public rowsOnPage = 10;
+    public rowsOnPage = 5;
     public sortBy = "email";
     public sortOrder = "asc";
   
   
   
   
-  constructor(private http:Http) { 
+  constructor(private http:Http,private dataService:DataService) { 
    this.showHide = true;
    this.showTable=false;
    this.showGraph=true;
 
-    this.options = {
+  
+  }
+
+  newData(tableData)
+  {
+for(let item in tableData)
+//for(let i=0;i<tableData.length;i++)
+{
+ 
+  this.value=tableData[item].ts;
+ this.arrTime.push(tableData[item].ts);
+ this.arrdistance.push(tableData[item].distance);
+ this.arrspeed.push(tableData[item].speed);
+ this.arrtet.push(tableData[item].tet);
+ this.arreab.push(tableData[item].eab);
+ this.arreot.push(tableData[item].eot);
+
+ this.options = {
             title : { text : 'Locomotive Data' },
+             xAxis: [{
+                type: 'datetime',
+                categories: this.arrTime,
+                
+                 title: {
+                    text: 'DateTime'
+                }
+         
+    }],
             series: [
-                {name: 'Speed',data: [29.9, 71.5, 106.4, 112.2]},
-                {data: [29.9, 1.5, 1.4, 12.2]},
-                {data: [12.9, 11.5, 1.4, 18.2]},
-                  {data: [14.9, 18.5, 11.4, 18.2]}
+                {name: 'Speed',data: this.arrspeed },
+                 {name: 'Distance',data: this.arrdistance},
+                {name: 'Tractive Effort Total',data: this.arrtet},
+                {name: 'EAB BP Pressure',data: this.arreab},
+                  {name: 'EOT BP Pressure',data: this.arreot}
                
                 
             ]
         };
-        console.log(this.options.series[1].data);
-     
+}
+//for (var i = 0; i < this.arrtet.length; i++) {
+  //  this.arrtet[i] = this.arrtet[i].replace(/"/g, "");
+  console.log(this.arrTime);
+console.log(this.arrtet);
+}
 
+  clickedRow(tableitems)
+  {
+    console.log(tableitems);
+    this.latPosition=tableitems.lat;
+    this.longPosition=tableitems.lng;
+    console.log(this.latPosition);
+    this.position.push({lat:this.latPosition,lng:this.longPosition});
   
+   let pos=  JSON.stringify(this.position)
+let pos1=pos.substring(1,pos.length-1)
+this.graphPosition=JSON.parse(pos1);
+console.log(this.graphPosition);
+
+console.log(this.latPosition);
+var mapOptions = {
+zoom: 15,
+
+center: new google.maps.LatLng(this.latPosition, this.longPosition),
+ mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById('map'), mapOptions)
+var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var beachMarker = new google.maps.Marker({
+          position: this.graphPosition,
+          map: map,
+          icon: image
+        });
   }
   
   ngOnInit() {
 
-var latarray = [42.85,43.85,44.85];
+            this.dataService.getServiceDataGET("assets/tableData.json")
+            .subscribe(tableData=> {this.newData(tableData)
+            });
+
+  this.dataService.getServiceDataGET("assets/tableData.json")
+            .subscribe(data=> this.data=data);
+var mapOptions = {
+zoom: 15,
+
+center: new google.maps.LatLng(12.971919, 77.596157),
+ mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById('map'), mapOptions)
+var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 12.971919, lng: 77.596157},
+          map: map,
+          icon: image
+        });
+/*var latarray = [42.85,43.85,44.85];
 var longarray =[-94.65,-111.65,-118.65];
 var directionsService = new google.maps.DirectionsService;
-var directionsDisplay = new google.maps.DirectionsRenderer;
-var map = new google.maps.Map(document.getElementById('map'), {
-zoom: 7,
-center: {lat: 41.85, lng: -87.65}
+var directionsDisplay = new google.maps.DirectionsRenderer;*/
+
+/*var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 12.971919, lng: 77.596157},
+          map: map,
+          icon: image
+        });*/
 
 
-});
- this.http.get("assets/tableData.json")
-  .map((response: Response) => response.json())
-            .subscribe(data=> {
-                this.data = data
-            });
-directionsDisplay.setMap(map);
+/*directionsDisplay.setMap(map);
 calculateAndDisplayRoute(directionsService, directionsDisplay);
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 var waypts = [];
@@ -100,7 +189,7 @@ k++;
 if (k == 3) clearInterval(interval);
 }, 2000);	
 
-}
+}*/
  
  } 
   toggleTable()
@@ -115,72 +204,7 @@ if (k == 3) clearInterval(interval);
   this.showGraph=false;
   }
   
-  public lineChartData:Array<any> = [
-    {data: [10, 10.5, 10.8, 20, 20.4, 20.9, 100], label: 'Distance'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Speed'},
-  
-	{data: [18, 48, 77, 9, 100, 27, 40], label: 'Tractive Effort (in LBS)'},
-	{data: [82, 83, 84, 85, 86, 87, 88], label: 'EAB BP Pressure'},
-	{data: [255, 256, 257, 258, 259, 215, 225], label: 'EOT BP Pressure'},
-	{data: [72, 71, 72, 73, 74, 75, 76], label: 'EAB BC Pressure'}
-  ];
-  public lineChartLabels:Array<any> = ['2/6/2017 10:14:00 PM', '2/6/2017 10:15:00 PM', '2/6/2017 10:16:00 PM', '2/6/2017 10:17:00 PM', '2/6/2017 10:18:00 PM', '2/6/2017 10:19:00 PM', '2/6/2017 10:20:00 PM'];
-  public lineChartOptions:any = {
-    responsive: true
-  };
-  public lineChartColors:Array<any> = [
-    {  
-      backgroundColor: '#FFF',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    },
-    {  
-      backgroundColor: '#FFF',
-      borderColor: 'rgba(77,83,96,1)',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(77,83,96,1)'
-    },
-    {  
-      backgroundColor: '#FFF',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    },
-	 {  
-      backgroundColor: '#FFF',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    },
-	 {  
-      backgroundColor: '#FFF',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    },
-	 {  
-      backgroundColor: '#FFF',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    }
-	
-  ];
-  public lineChartLegend:boolean = true;
-  public lineChartType:string = 'line';
+ 
   
 }
 
