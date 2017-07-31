@@ -2,26 +2,24 @@ package com.ge.controller;
 
 import java.util.logging.Logger;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class ListController {
 
 	private static Logger LOGGER = Logger.getLogger(ListController.class.getName());
 
-	@Autowired
-	protected RestTemplate restTemplate;
+	/*@Autowired
+	protected RestTemplate restTemplate;*/
 	
 	// @CrossOrigin(origins = "http://localhost:4200")
-	/*@RequestMapping(value = "/api/ldv", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/api/ldv", method = RequestMethod.GET, produces = "application/json")
 	public String handleDataList() {
 		LOGGER.info("it' works!!");
 		return "{\"sd\":\"10/07/2016\", \"ed\":\"23/07/2016\",\"wd\":\"3 feet\",\"adt\":\"25/07/2016\",\"custName\":\"John\",\"sNo\":\"1291834129084129\",\"name\":\"Bravo\",\"version\":\"V012345\"}";
-	}*/
+	}
 	
 	/*@RequestMapping(value = "/api/getFRA", method = RequestMethod.GET)
 	public void getFraData(){

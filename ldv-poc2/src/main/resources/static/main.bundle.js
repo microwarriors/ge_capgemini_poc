@@ -716,7 +716,7 @@ exports = module.exports = __webpack_require__(21)();
 
 
 // module
-exports.push([module.i, ".copyright{\r\n\ttext-transform: uppercase;\r\n\tmargin-top: 9px;\r\n\tcolor: #999c9f;\r\n\r\n}\r\n .navbar-nav>li>a:hover{\r\n\tcolor:#000 !important;\r\n}\r\n\r\n@media (min-width: 1200px)\r\n{\r\n\t.footerColor\r\n{ \r\n\tmargin:0px;\r\n    background-color: #025090;\r\n    position:absolute;    \r\n    left:0;\r\n    bottom:0;\r\n    height:40px;\r\n    width:100%;\r\n}\r\n.container {\r\n  \r\n\t\r\n\tmargin-top:20px;\r\n\t\r\n}\r\n}\r\n.footerColor\r\n{ \r\n\tmargin:0px;\r\n    background-color: #025090;\r\n    position:absolute;    \r\n    left:0;\r\n    bottom:0;\r\n    height:40px;\r\n    width:100%;\r\n} \r\n\r\nul.nav li a\r\n{\r\n  color: aliceblue;\r\n}\r\n.navbar-nav>li>a{\r\n\tpadding: 10px 10px;\r\n}\r\n.navbar-nav>li>a:focus{\r\n\tcolor:#000 !important;\r\n}\r\nul.nav li\r\n{\r\n    font-size: 14px;\r\n \r\n}", ""]);
+exports.push([module.i, ".copyright{\r\n\ttext-transform: uppercase;\r\n\tmargin-top: 9px;\r\n\tcolor: #999c9f;\r\n\r\n}\r\n .navbar-nav>li>a:hover{\r\n\tcolor:#000 !important;\r\n}\r\n\r\n@media (min-width: 1200px)\r\n{\r\n\t.footerColor\r\n{ \r\n\r\n   position:fixed;\r\n   left:0px;\r\n   bottom:0px;\r\n   height:40px;\r\n   width:100%;\r\n     margin-left: 0px !important;\r\n background-color: #025090;\r\n padding-right: 0px !important;\r\n    \r\n}\r\n.container {\r\n  \r\n\t\r\n\tmargin-top:20px;\r\n\t\r\n}\r\n}\r\n.footerColor\r\n{ \r\n\t\r\n    /*background-color: #025090;\r\n    position:absolute;    \r\n    left:0;\r\n    \r\n    height:40px;*/\r\n  margin-left: 0px !important;\r\n      position:fixed;\r\n   left:0px;\r\n   bottom:0px;\r\n   height:40px;\r\n   width:100%;\r\n background-color: #025090;\r\n \r\n} \r\n\r\n\r\n\r\nul.nav li a\r\n{\r\n  color: aliceblue;\r\n}\r\n.navbar-nav>li>a{\r\n\tpadding: 10px 10px;\r\n}\r\n.navbar-nav>li>a:focus{\r\n\tcolor:#000 !important;\r\n}\r\nul.nav li\r\n{\r\n    font-size: 14px;\r\n \r\n}", ""]);
 
 // exports
 
@@ -734,7 +734,7 @@ exports = module.exports = __webpack_require__(21)();
 
 
 // module
-exports.push([module.i, ".navbar {\r\n    position: none !important;\r\n\tcolor:#a8bddd;\r\n}\r\n@media (min-width: 1200px)\r\n{\r\n.container {\r\n    width: 1319px;\r\n}\r\n}\r\n\r\nul.nav li\r\n{\r\n    font-size: 18px;\r\n \r\n}\r\nh3{\r\nfont-size: 18px;\r\n}\r\nul.nav li a\r\n{\r\n  \r\n    color:#fff;\r\n}\r\n  ul.nav li a:focus,ul.nav li a:hover,ul.nav li a:active\r\n{\r\n    background-color: #eff0f1;\r\n    color:#000;\r\n    border-right:1px solid #191970;\r\n    border-bottom: 2px solid red;\r\n   padding-bottom:13px;\r\n}\r\n ", ""]);
+exports.push([module.i, ".navbar {\r\n    position: none !important;\r\n\tcolor:#a8bddd;\r\n}\r\n@media (min-width: 1200px)\r\n{\r\n.container {\r\n    width: 1319px;\r\n}\r\n}\r\n\r\nul.nav li\r\n{\r\n    font-size: 18px;\r\n \r\n}\r\nh3{\r\nfont-size: 18px;\r\n}\r\nul.nav li a\r\n{\r\n  \r\n    color:#fff;\r\n}\r\n  ul.nav li a:focus,ul.nav li a:hover,ul.nav li a:active\r\n{\r\n    background-color: #eff0f1;\r\n    color:#000;\r\n    border-right:1px solid #191970;\r\n    border-bottom: 2px solid red;\r\n   padding-bottom:13px;\r\n}\r\n \r\n .headercomp\r\n {\r\n  /*position:fixed;\r\n  margin:0px auto;\r\n   width:100%;\r\n   background-color:#025090;\r\n   border-bottom:2px solid red;     \r\n   height: 50px;*/\r\n }", ""]);
 
 // exports
 
@@ -1040,7 +1040,7 @@ module.exports = "<div class =\"container \" >\r\n\t<div class =\"row\" id=\"ved
 /***/ 454:
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <div class=\" row col -md-12 footerColor\">\r\n    \r\n    <ul class=\"nav navbar-nav\">\r\n      <li><a target=\"_blank\" href=\"#\">Privacy</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Terms and Conditions</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Site Map</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Accessibility</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Cookies</a></li>\r\n      <li class=\"copyright\">� 2017 General Electric</li>\r\n    </ul>\r\n  </div>\r\n"
+module.exports = "\r\n  <div class=\" row col-md-12 col-lg-12 col-sm-12 footerColor\">\r\n    \r\n    <ul class=\"nav navbar-nav\">\r\n      <li><a target=\"_blank\" href=\"#\">Privacy</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Terms and Conditions</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Site Map</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Accessibility</a></li>\r\n\t  <li><a target=\"_blank\" href=\"#\">Cookies</a></li>\r\n      <li class=\"copyright\">� 2017 General Electric</li>\r\n    </ul>\r\n  </div>\r\n"
 
 /***/ }),
 
