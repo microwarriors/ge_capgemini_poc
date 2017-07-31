@@ -5,23 +5,23 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DataComponent } from './data/data.component';
-import { RouterModule,Routes }   from '@angular/router';
+import { RouterModule,Routes } from '@angular/router';
 import { DataDetailsComponent } from './data-details/data-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule ,ReactiveFormsModule}   from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
 import { ChartsModule } from 'ng2-charts';
 import { Component, Input } from '@angular/core';
-import { Injectable }     from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import { AgmCoreModule } from '@agm/core';
-import {DataTableModule} from "angular2-datatable";
-import { DataFilterPipe }   from './table.pipe';
+import {DataTableModule} from 'angular2-datatable';
+import { DataFilterPipe } from './table.pipe';
 import {DataService} from './services/data.service'
 import { ChartModule } from 'angular2-highcharts';
 import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
@@ -72,8 +72,7 @@ const routes: Routes = [
     DataTableModule,
 		AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBli14IYUYuWrKb0hicJVvSWlUTdwcOWoU'
-    })
-    
+    })   
   ],
   providers: [
     DataService,
