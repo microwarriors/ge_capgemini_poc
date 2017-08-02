@@ -188,7 +188,6 @@ window.alert('Directions request failed due to ' + status);
 k++;
 if (k == 3) clearInterval(interval);
 }, 2000);	
-
 }*/
  
  } 
@@ -207,8 +206,3 @@ if (k == 3) clearInterval(interval);
  
   
 }
-
-
- 
- 
-

@@ -26,9 +26,20 @@ ul.nav li a
 {
     background-color: #eff0f1;
     color:#000;
-     text-shadow: 2px 2px 2px #555;
+   
     border-right:1px solid #191970;
     border-bottom: 2px solid red;
    padding-bottom:13px;
+}
+
+.head
+{
+    width: auto;
+    margin-left: 15px;
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px !important;
 }
  
