@@ -3,17 +3,18 @@
 <img src="./assets/ge_logo.png" alt="Locomotive" style="width:100%;height:48px;" />
 </div>
 <div style="float:left;">
- <h3 style="width:auto;margin-left:15px;color:#fff; margin-top: 16px;"> LOCOMOTIVE DATA VISION </h3>
+ <a class="head" [routerLink]="['./login']"> LOCOMOTIVE DATA VISION </a>
 </div>
 <div style="float:right;">
 <!--<img src="./assets/ge_header_loco.jpg" alt="Locomotive" style="width:100%;height:100px;" />-->
  <ul class="nav navbar-nav">
 	
 
-      <li class="active"><a routerLink="/data">View</a></li>
+      <li ><a  routerLink="/data" routerLinkActive="active">View</a></li>
        
-      <li><a routerLink="/dataDetails">File</a></li>
-      <li><a href="#">Utilities</a></li>
+      <li><a  routerLink="/dataDetails" routerLinkActive="active">File</a></li>
+      <li><a routerLinkActive="active-link" >Utilities</a></li>
+      <li><a routerLink="/login" routerLinkActive="active-link" (click)="logout()">Logout</a></li>
     </ul>
 </div>
 <!--div class="col-md-12" style="background-color:#025090;height:80px"></div-->

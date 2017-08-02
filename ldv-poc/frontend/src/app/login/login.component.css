@@ -1,3 +1,21 @@
 .login_height{
-    height:438px;
+  
+    margin-top: 20px;
+   
+}
+
+.form-control
+{
+    width:70%;
+    height:40px;
+}
+
+.headerColor
+{
+    color:#025090;
+}
+
+.mar-top-20
+{
+    margin-top: 20px;
 }

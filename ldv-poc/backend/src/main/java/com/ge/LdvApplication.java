@@ -16,8 +16,16 @@ public class LdvApplication {
 	public static RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
+	
+	@Bean
+	public RequestProcessingInterceptor getRequestInterceptor()
+	{
+		return new RequestProcessingInterceptor();
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(LdvApplication.class, args);
 	}
+	
+	
 }

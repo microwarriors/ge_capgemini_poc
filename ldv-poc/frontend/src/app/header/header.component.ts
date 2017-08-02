@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Http} from '@angular/http';
+import {DataService} from '../services/data.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+data:any;
+  constructor(private http:Http,
+  private dataService: DataService) { }
 
   ngOnInit() {
+  }
+
+  logout()
+  {
+    this.dataService.getServiceDataGET("api/logout")
+    .subscribe(data=>this.data=data);
+
   }
 
 }
