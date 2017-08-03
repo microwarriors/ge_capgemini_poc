@@ -46,10 +46,10 @@ public class RequestProcessingInterceptor extends HandlerInterceptorAdapter {
 		String requestURI = request.getRequestURI();
 		System.out.println(requestURI);
 		if(requestURI.contains("/login")){
-			HttpSession httpSession=request.getSession(false);
+			//HttpSession httpSession=request.getSession(false);
 			
 			//System.out.println("arg"+requestURI + "inside Interceptor" + httpSession.getAttribute("lgC"));
-			if(httpSession!=null)
+			/*if(httpSession!=null)
 			{
 				System.out.println(request.getSession().getAttribute("lgC"));
 			//request.getSession().setAttribute("lgC", null);
@@ -58,14 +58,22 @@ public class RequestProcessingInterceptor extends HandlerInterceptorAdapter {
 			else
 			{
 				return true;
-			}
-			
+			}*/
+			return true;
 			
 		}
 		else
 		{
+			if(request.getSession().getAttribute("lgC")!=null)
+			{
+				return true;
+			}
 			
-			return true;
+			else
+			{
+				return false;
+			}
+		
 		}
 		
 		
