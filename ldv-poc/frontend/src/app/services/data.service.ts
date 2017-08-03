@@ -7,6 +7,8 @@ export class DataService {
 
    }
 
+   
+
 getServiceDataGET(url)
 {
   return this.http.get(url)

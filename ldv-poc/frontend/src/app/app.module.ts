@@ -25,6 +25,7 @@ import { DataFilterPipe } from './table.pipe';
 import {DataService} from './services/data.service'
 import { ChartModule } from 'angular2-highcharts';
 import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
+import { MapChildComponent } from './map-child/map-child.component';
     declare var require: any;
 
  
@@ -51,7 +52,8 @@ const routes: Routes = [
     DataDetailsComponent,
   FooterComponent,
     LoginComponent,
-	DataFilterPipe
+  DataFilterPipe,
+  MapChildComponent
 
   ],
   imports: [
