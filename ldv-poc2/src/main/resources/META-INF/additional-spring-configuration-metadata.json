@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "postgres.dataSource.driver",
+    "type": "java.lang.String",
+    "description": "A description for 'postgres.dataSource.driver'"
+  },
+  {
+    "name": "postgres.dataSource.driver",
+    "type": "java.lang.String",
+    "description": "A description for 'postgres.dataSource.driver'"
+  }
+]}
