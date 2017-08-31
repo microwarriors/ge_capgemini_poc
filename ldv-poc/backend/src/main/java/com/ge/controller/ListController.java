@@ -42,7 +42,7 @@ public class ListController {
 		LOGGER.info("it' works!!");
 		return "{\"sd\":\"10/07/2016\", \"ed\":\"23/07/2016\",\"wd\":\"3 feet\",\"adt\":\"25/07/2016\",\"custName\":\"John\",\"sNo\":\"1291834129084129\",\"name\":\"Bravo\",\"version\":\"V012345\"}";
 	}
-	
+/*	
 	@RequestMapping(value = "/api/getFRA", method = RequestMethod.GET)
 	public void getFraData(){
 		FraDataList fraDataList = restTemplate.getForObject("http://FRA-DATA-SERVICE/getFra",
@@ -56,7 +56,7 @@ public class ListController {
 		LOGGER.info("Speed : " + fraDataList.getFraData().get(0).getSpeed());
 		LOGGER.info("TimeStamp : " + fraDataList.getFraData().get(0).getTimeStamp());
 		
-	}
+	}*/
 
 	@RequestMapping(value = "/api/locoData", method = RequestMethod.POST)
 	public void handleLocoData(@RequestParam("uploadFile") MultipartFile file,
@@ -75,7 +75,7 @@ public class ListController {
 	public boolean login( @RequestBody String loginData, HttpServletRequest request, HttpServletResponse response) 
 	{
 		
-			
+			/*
 			System.out.println("user is"+loginData);
 			System.out.println(request.getSession().getAttribute("lgC"));
 		
@@ -86,7 +86,8 @@ public class ListController {
 		else
 		{
 			System.out.println(request.getSession().getAttribute("lgC"));
-		}
+		}*/
+		request.getSession().setAttribute("lgC",loginData);
 		return true;
 			//System.out.println("session"+request.getSession().getAttribute("lgC"));
 	}

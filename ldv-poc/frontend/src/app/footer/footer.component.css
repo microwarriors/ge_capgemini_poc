@@ -12,13 +12,14 @@
 {
 	.footerColor
 { 
-	margin:0px;
-    background-color: #025090;
-    position:absolute;    
-    left:0;
-    bottom:0;
-    height:40px;
-    width:100%;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:40px;
+   width:100%;
+     margin-left: 0px !important;
+ background-color: #025090;
+ padding-right: 0px !important;
 }
 .container {
   
@@ -29,13 +30,13 @@
 }
 .footerColor
 { 
-	margin:0px;
-    background-color: #025090;
-    position:absolute;    
-    left:0;
-    bottom:0;
-    height:40px;
-    width:100%;
+  margin-left: 0px !important;
+      position:fixed;
+   left:0px;
+   bottom:0px;
+   height:40px;
+   width:100%;
+ background-color: #025090;
 } 
 
 ul.nav li a

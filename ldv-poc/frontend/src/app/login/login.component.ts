@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,HostListener, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
@@ -13,6 +13,16 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router,private http:Http) { 
    
    }
+
+@HostListener('window:beforeunload', ['$event'])
+beforeunloadHandler(event) {
+    this.closeBrowser();
+}
+
+closeBrowser()
+{
+alert("close it");
+}
 
   ngOnInit() {
   }
