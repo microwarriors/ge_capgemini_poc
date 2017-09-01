@@ -19,7 +19,7 @@ export class MapChildComponent implements OnInit,OnChanges {
  lng:number;
  //mapOptions:any;
  //map:any;
-zoom: number = 8;
+
   
   // initial center position for the map
 
