@@ -2,9 +2,11 @@ package com.ge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 import com.ge.filters.ErrorFilter;
@@ -12,11 +14,12 @@ import com.ge.filters.PostFilter;
 import com.ge.filters.PreFilter;
 import com.ge.filters.RouteFilter;
 
-//@EnableZuulProxy
+@EnableZuulProxy
 @SpringBootApplication
 @EnableHystrix
 @EnableTurbine
 @EnableHystrixDashboard
+@EnableEurekaServer
 public class LdvPocZuulGetwayApplication {
 
 	public static void main(String[] args) {

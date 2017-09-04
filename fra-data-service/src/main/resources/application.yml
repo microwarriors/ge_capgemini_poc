@@ -1,14 +1,14 @@
 ### Spring properties
 # Service registers under this name
-#spring:
- # application:
-  #  name: fra-data-service
+spring:
+  application:
+    name: fra-data-service
 
 # Discovery Server Access
-#eureka:
- #   client:
-  #    serviceUrl:
-   #     defaultZone: http://localhost:1111/eureka/
+eureka:
+   client:
+      serviceUrl:
+       defaultZone: http://localhost:8080/eureka/
 
 # HTTP Server (Tomcat) Port
 server: 
