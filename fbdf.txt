@@ -1,5 +1,0 @@
-1. service class to read the xml file and bind it is as java objects
-
-2. now conver the javaa objects  into json objects
-
-3. pass the json objects  to controller  inorder  to bind it with angular 2 component.
