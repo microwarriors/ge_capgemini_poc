@@ -1,0 +1,18 @@
+1.	install git
+
+2. 	git --version
+	mkdir gitdemo
+	cd gitdemo
+
+3.	git config --global user.name 'Vasiahli Kulkarni'
+4.	git config --global user.email 'vaishali.kulkarni@capgemini.com'
+5.	git config -l
+
+6.	git init project1
+	cd project1
+	tree .git
+
+7.	git  init --bare bareproject
+	tree bareproject1
+
+8.	http://hubot.github.com
