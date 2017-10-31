@@ -1,0 +1,59 @@
+
+
+
+
+IBM Lotus Notes, CPMT(BMC- Remedy tool), Maven, IBM’s  RSA(Rational  Software   
+Architect)as Eclipse IDE, DB Visualizer, FTP,  PUTTY, JUNIT 4, Log4j,
+IBM clear case version control
+
+
+software suite intended to run a Windows PC to provide an integrated download and time based playback solution for GE locomotive video and data recording systems
+Locomotive Data Vision_POC
+?	Involved in design and development of POC on micro service architecture.
+?	Added new components and updated routing in angular2 front-end.
+?	Worked on application deployment on predix and pivotal Cloud foundry.
+?	Integration of UAA  authentication service of predix with our draftet application.
+?	Initial setup of dev environment for deployment on predix cloud.
+
+IKEA- Job Search Tool
+
+to redesign the current job search tool and develop one global solution and then replace the current tool on the following platforms like Full site, mobile site, Intra-net
+
+•	Issue Ticket Resolving Management.
+•	Code change for change requests / Enhancement 
+•	Code change, code commit, deploy, Functional testing.
+
+
+
+EHS –Global Regulatory Label solution(GRLS): 
+
+The Goal of the GRLS is to provide the capability to manage hazardous labels and support label printing. 
+
+Issue Tickets Resolving.
+Coding and development for change requests (CR). 
+
+
+
+
+ONE-D
+
+Implement Standard Global Design for  Direct as the interim order entry solution for One Du
+
+
+ESO: SAP landscape based enterprise portal which certain are created by which outside Vendors can sell their product and We as a Buyer can avail the product.
+
+
+
+Distributed Order Management: Tickets Resolving.
+Coding and development for change requests (CR). 
+	
+NXT Generation Banking Platform Consulting: 
+
+Involved in the Development of Insurance Sync(Extract and Upload).
+• Involved in the Development of Collateral Sync,Reconciliation,Orchestation Adapter and Product Adapter,Root Handler and Detailed Handler Using GEFU Framework,Migrating the existing setup into Hybrid GEFU Framework for Faster Recordprocessing,Loading the Source Staging Tables During Extract Process
+• Involved in the Development of 
+• Responsible for Developing Orchestation Adapter and Product Adapter.
+• Responsible for Developing the Root Handler and Detailed Handler Using GEFU Framework.
+• Responsible for .
+• Responsible for .
+• Responsible for Loading the Product Tables During Upload Pro

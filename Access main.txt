@@ -1,0 +1,312 @@
+ SIVA: 
+
+
+
+
+====================================
+8047367  extension
+
+
+000 4642264400  ikea help desk number:'
+900
+
+
+
+
+
+FL english :  90086 21 333 975 20 
+
+
+FL chinese  Phone: +86 21 33397 499 
+
+4004  cap it desk
+
+
+
+
+==================================================
+
+IKEA01043280  JST Source code - checkin  
+
+AWS  
+
+
+https://326224385303.signin.aws.amazon.com/console 
+
+Account: 326224385303
+ 
+ ranjit 
+    
+yQBV[^iDL[0q   
+
+
+
+Gra
+==============================
+ 
+S3
+
+jstam  //// not required
+
+pTbAI9W]U|xQ
+
+Gra
+
+https://326224385303.signin.aws.amazon.com/console
+
+
+===============================
+
+
+2016-10-14  10:53
+
+https://staging.jst.cdtapps.com/ext/job/search/external/gb/en/home 
+
+=====================================================
+
+JST Credential
+username - jstuser 
+password - jst8395user934535pwd
+ 
+CTEd
+https://ww8.cte.ikeadt.com/ext/job/search/internal/se/sv/home
+ 
+ 
+Preproduction
+https://staging.jst.cdtapps.com/ext/job/search/external/gb/en/home
+https://staging.jst.cdtapps.com/ext/job/search/internal/gb/en/home
+  
+Production
+ww8.ikea.com/ext/job/search/external/gb/en/home
+ww8.ikea.com/ext/job/search/internal/gb/en/home
+
+
+
+
+https://ww8.ikea.com/ext/job/search/internal/gb/en/home 
+
+
+===========================================================================================
+IKEA Account:
+------------------------	
+
+Hi Ranjit,
+                Use the below credential for checking internal url in production.
+ 
+Userid: shsha35
+Pwd:    Hello4hai$
+           
+     Hello4hai#1
+======================================================================================
+
+VDI details: 
+------------------
+https://itportal.iags.ikea.com/Citrix/ITPortal/site/default.jsp
+
+
+Ikea account passowrd
+
+=================================================================================
+Project place:
+
+ranjit.maniyan@cap
+Bek
+
+============================================
+
+kennexa brassring:
+
+ http://www.ikea.com/ms/en_AU/this-is-ikea/available-jobs/index.html 
+
+==============================================================
+C:\Users\rmaniyan\AppData\Local\Microsoft\Outlook
+
+=======================================
+Leave management system:
+
+https://lms.in.capgemini.com 
+==============================================================
+The link is now available on the Job vacancies page on Inside
+ 
+https://inside.ikea.com/careerlearning/jobvacancies/pages/default.aspx
+ 
+and Inside External
+
+https://inside-ext.apps.ikea.com/careerlearning/JobVacancies/Pages/default.aspx
+
+
+============================================================================
+
+idesk:
+
+
+
+https://itidesk.ikea.com/arsys/forms/itars3/SHR%3ALandingConsole/Default+Administrator+View/?cacheid=18101639 
+
+CAP-RW-JST-SL2 
+
+
+
+
+\\ITSEELM-NT0001\Exchange\chsiv\logs
+
+
+
+
+https://ww8.cte.ikeadt.com/ext/job/search/external/se/sv/home
+
+https://ww8.cte.ikeadt.com/ext/job/search/internal/se/sv/home
+
+username - jstuser 
+password - jst8395user934535pwd
+
+
+Userid: shsha35
+Pwd: Hello4hai$
+
+
+
+chitraikani.sivarajan@ikea.com
+
+
+\\ITSEELM-NT0001\Exchange\chsiv 
+
+
+
+
+Service desk:
+
+000 46850535278
+
+
+itservicedesk@ikea.com 
+
+clear Quest: 5460153
+
+ ========================================
+
+CAP-RW-JST-SL2
+==========================
+
+D:\
+
+
+
+D:\Nitin\Ikea\IRW Archive\Ikea Job Search Tool\Ranjit
+
+
+&apos;
+
+
+Hi Ranjit,
+                Use the below credential for checking internal url in production.
+ 
+Userid: shsha35
+Pwd: Hello4hai$
+
+
+
+
++46 734939656
+
+
+
+BR_JST_FIELDS_VALUES_V1_2016_10_18_16_45_27-spare
+
+
+siva ko properties files bhejne he.
+
+project place pe upload 
+
+laptop desk no:
+
+
+PRD_JS_WEB-R.1.0.0.-BL135
+
+PRD_JS_WEB-R.1.0.0.-BL136
+
+
+
+
+https://itidesk.ikea.com/arsys/forms/itars3/SHR%3ALandingConsole/Default+Administrator+View/?cacheid=18101639 
+
+
+
+===============================
+
+SELECT ji.COUNTRY,ji.SYSTEM_TYPE,COUNT(STATUS) AS count FROM job_info ji WHERE ji.STATUS ='ACTIVE'GROUP BY ji.COUNTRY_CODE,ji.SYSTEM_TYPE;
+
+===========================
+
+
+
+<C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile>
+
+
+[?1/?3/?2017 3:00 PM] Chitraikani Sivarajan (External - Capgemini India Pvt. Ltd): 
+
+
+\\itinbac-dw0310\repository 
+
+ [?1/?3/?2017 3:00 PM] Chitraikani Sivarajan (External - Capgemini India Pvt. Ltd): 
+\\itinbac-dw0310\repository 
+
+
+
+
+
+SKYPE ID:
+
+CONFERENCE CODE: 8799039191
+LEADER PIN: 337397
+
+
+
+=====================================================================================================================================
+
+
+Sofie is our Support manager for IRW Range and Stock-check
+
+Raghu is our Service Deliver Manager for IRW SLF team
+
+========================================================
+[?1/?4/?2017 6:39 PM] BalaSundaram, Venkatesh: 
+go to action tab and open the WO
+
+PBI000000066714 sushil
+
+[?1/?3/?2017 5:45 PM] V, Udhayakumar: 
+<C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile> 
+
+
+
+
+
+===============================
+
+1000009   PL leave
+
+100374168  CAP_SR_11_025_JST_Support  India Offshore
+
+==========================================
+local workspace :
+
+
+http://localhost:9999/ext/job/search/external/gb/en/home
+
+
+
+Arpita ikea machine  no:  dwo362
+
+
+==================================================
+
+Project place:
+ranjit.maniyan@capgemini.com
+Manc----#1
+
+By...#1  login dekstop
+
+ikea  account  :
+ranjit.maniyan@ikea.com
+Pea  #1 
