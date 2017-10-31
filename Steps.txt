@@ -1,0 +1,88 @@
+npm install  from sts [it will node modules]
+
+ng build  in fronenend path    cmd  [static folder in frontened-> target folder will be created]
+
+copy  the static folder content of frontend  into static folder  of backend
+
+ng serve      ng live dev server for UI  will be up.
+
+
+Maven install in sts
+
+mvn spring-boot:run [in backend path] in cmd 
+
+=======================================================
+ 
+proxy method
+
+
+npm install in STS
+
+npm start  [D:\angCli\GE LDV\GELDV\src\frontend] in cmd
+
+ng build
+
+
+other  than proxy method
+
+set the proxy  on the project  folder locatiom
+  
+npm install  on the D:\angCli\GE LDV\GELDV\src\frontend
+
+=================
+
+  method other  than proxy:
+maven clean
+
+npm install  in STS [if not modules is already not there]
+
+ng build on  D:\angCli\ng2boot\LOCOMO\frontend\src\main\frontend
+
+
+
+
+copy the    target -> frontend ->  contents files to   backend->src-> main->  resources -> static folder.
+
+then do the npm start   to invoke the proxy.config.json
+
+the 4200 is up now
+
+maven  in stall
+
+ mvn spring-boot:run  in backend
+
+===============
+
+
+ shasi  steps:
+
+
+
+npm install  in frontend
+
+npm start
+
+
+maven install
+
+
+run as spring boot app
+
+
+---->
+
+
+ not able  to find the main class
+
+project -> rightr click->build path
+
+
+
+
+
+
+********************************
+
+steps for ldv in predix
+
+
