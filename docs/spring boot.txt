@@ -1,0 +1,19 @@
+xml
+
+annotation
+
+javaconfig
+
+
+jee6:
+
+
+Installation:
+STS-3.5.1 IDE 
+
+JDK 1.8 (You can use 1.7 or 1.6)
+•Maven 3.x
+
+
+
+C:\Program Files\Java\jre1.8.0_74\bin;%PATH%

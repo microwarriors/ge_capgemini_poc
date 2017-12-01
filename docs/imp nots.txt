@@ -1,0 +1,58 @@
+http://appstore.in.capgemini.com/CMapplicationCatalog/
+
+
+devi.patra
+
+
+jdk1.8, mars, tomcat 8.0, environment variable,
+catakina_home =, java_home 
+
+manish.roy@capgemini.com
+
+
+
+PEEUGE020
+
+united health care 
+
+medi claim.
+
+
+
+
+
+shobha.murthy@capgemini.com
+
+ananda.sen@capgemini.com
+
+
+
+BLR-WFC-KAK-6F-W0045
+
+
+==============================
+
+
+MARS 2 eclipse version
+
+
+Note JS
+
+STS
+
+Postgres  db client
+
+Maven
+
+cloudfoundry
+
+
+
+
+===============
+
+
+10.51.72.74
+========================
+
+

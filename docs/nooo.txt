@@ -1,0 +1,39 @@
+Http Observables
+
+ front end to back end communications.
+
+1. Angular 2 cli
+
+
+M2_HOME 
+D:\apache-maven-3.2.3-bin\apache-maven-3.2.3 
+
+MAVEN_HOME 
+D:\apache-maven-3.2.3-bin\apache-maven-3.2.3 
+
+
+https://blog.jdriven.com/2016/12/angular2-spring-boot-getting-started/ 
+
+
+This is the solution I was looking for!! Many post I have seen use node js as Backend but here we can use Spring Boot.
+
+server.port=1234
+
+
+https://github.com/microwarriors/ge_capgemini_poc/tree/master/angular2SpringBootDemo/demo \
+
+
+https://github.com/bijukunjummen/spring-boot-angular2-static-sample
+
+
+
+https://github.com/zouabimourad/angular2-spring 
+
+
+http://www.java-allandsundry.com/2016/11/single-page-application-with-spring.html   sridhar 
+
+https://github.com/bijukunjummen/spring-boot-angular2-static-sample
+
+
+
+spring boot angualr 2 static example HOTEL UI example	

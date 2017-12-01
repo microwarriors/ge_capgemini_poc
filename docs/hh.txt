@@ -1,0 +1,47 @@
+.typingsrc
+
+{
+    "rejectUnauthorized": false,
+    "githubToken": "your-assigned-40-character-hex-github-token",
+    "registryURL": "http://api.typings.org/",
+    "defaultSource": "dt"
+}
+
+
+
+
+
+hi, I fixed changing the port in the package,json file
+
+orginal
+"start": "http-server -a localhost -p 8000 -c-1",
+
+fixed
+"start": "http-server -a localhost -p 8080 -c-1",
+
+if you have installed and running IIS or some automatic server that use the localhost port 8000 can block the node server.
+==============================
+npm install typings -g
+
+
+=================
+
+
+Bar chart 
+Area chart 
+
+Interactive area chart
+==============================
+npm install phantomjs --phantomjs_cdnurl=https://bitbucket.org/ariya/phantomjs/downloads
+
+
+
+file: 'file:///d%3A/UI-Dashboard%20Pro/sb-admin-angular-master/sb-admin-angular-master/bower.json'
+severity: 'Warning'
+message: 'Unable to load schema from 'http://json.schemastore.org/bower': Unable to to connect to http://json.schemastore.org/bower. Error: connect ETIMEDOUT 137.117.17.70:80'
+at: '1,1'
+source: ''
+
+
+
+npm install phantomjs

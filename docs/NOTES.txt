@@ -1,0 +1,103 @@
+cloudfoundry:
+--------------
+
+Sign in to PWS: 
+> cf login -a https://api.run.pivotal.io
+
+
+
+https://angular.io/docs/js/latest/quickstart.html 
+
+
+
+npm config set proxy http://10.51.1.170:8080
+npm config set https-proxy http://10.51.1.170:8080
+npm config set registry http://registry.npmjs.org
+npm config set strict-ssl false
+
+
+
+
+
+
+
+============================================
+
+
+validated: new
+
+
+
+
+
+npm config set proxy http://10.51.1.170:8080
+npm config set https-proxy http://10.51.1.170:8080
+npm config set registry http://registry.cnpmjs.org
+npm config set strict-ssl false
+
+
+set http_proxy=10.51.1.170:8080
+set https_proxy=10.51.1.170:8080
+set HTTP_PROXY=10.51.1.170:8080
+
+set HTTPS_PROXY=http://10.51.1.170:8080
+set no_proxy="devcloud.sw.ge.com, openge.ge.com, design.sw.ge.com, .swcoe.ge.com, .sw.ge.com, .ice.ge.com, .build.ge.com"
+
+
+git config --global http.sslVerify false
+
+npm set strict-ssl false
+
+--------------------------------
+
+
+
+"start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" "
+to
+
+"start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+
+
+
+------------------------------------------
+globally install the typescript and typings
+
+
+
+typescript@2.3.3
+
+typings@2.1.1
+
+npm install -g typescript
+
+npm install -g typings
+
+
+
+
+
+
+
+
+
+
+
+
+ranjit.maniyan@capgemini.com
+
+
+
+===================================
+mahesh kotawadekar  proxy team
+
+
+
+
+
+npm install phantomjs -g
+
+
+npm -g angular
+
+
+gitHub install

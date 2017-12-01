@@ -1,0 +1,136 @@
+Apache Spark/Hadoop Echo System Training - 3rd to 7th Oct 2016
+
+Angular JS & Restful Webservices Training  Program ( 15th , 16th 22nd and 23rd  Oct )
+
+Elearning modules under competancy  group
+
+to competancy report:
+
+ to samrat mail
+
+
+e-Learning Modules on Time Management + e-Learning Module on Taking in Initiative[5 hours ]
+
+]
+
+1.	JDK 1.8
+2.	Maven
+3.	Node JS
+4.	Spring Tool Suite
+5.	Visual Studio Code (For angular JS development)
+6.	Postgres SQL
+7.	PG Admin (client for postgres SQL)
+
+Technology Stack
+1.	Cloud Foundry (Either use the free account or create a local set up cloud foundry server in any of the machines)
+2.	Spring Boot.
+3.	Hibernate/ Spring Data Services
+4.	HTML5
+5.	CSS3
+6.	Bootstrap
+7.	Polymer.
+8.	Angular JS.
+9.	Require JS.
+10.	Node based tools - NPM, Bower, Grunt/Gulp
+
+===========================================
+
+JST:
+
+JST rollout tasks : Quick walkthrough
+
+Master data update for JST
+
+
+JST Deployment Handover
+
+JST KT Process to resource on Feb last 2016
+[[
+
+1.	Database set up for  PPE, CTE, Production.  [done]
+2.	Property file generation / JST content key content  (PFA) 
+3.	Master data updating using the configuration files in S3 folder. (PFA)
+4.	AWS logs  - access logs,  Http logs  ,  downloading the logs from S3 folder in AWS   Java file(PFA)
+5.	Deployment in PPE, CTE, Production process in AWS.
+6.	External country mapping. (PFA)
+7.	Market Roll –  out   for JST (PFA).
+8.	Process for master data updation (raising service request , follow up questions) . PFA
+
+
+]]
+
+
+Incident report generation on  daily tickets under IKea-JST application and working on that.
+
+Giving the jobs on ikea.com: Update  to client .\
+
+change request tickets
+
+Add locations  to JST  site  corportaing with IBM team.
+
+
+[[[
+
+BU	Sub BU	Service Line	Location
+AppsTwo CSD AM	AppsTwo CSD AM 	Java J2EE 	Bangalore 6B Gr-3 floor 
+Assignment Details:
+Project Code	Project Name	Assignment Start Date	Assignment End Date
+100367162	IKEA Invt 2017-MC-IRW	01-Jan-2017	28-Feb-2017
+
+
+100374168(JST Support)
+
+
+
+
+BU	Sub BU	Service Line	Location
+AppsTwo CSD AM	AppsTwo CSD AM 	Java J2EE 	Bangalore 6B Gr-3 floor 
+Assignment Details:
+Project Code	Project Name	Assignment Start Date	Assignment End Date
+100367377	IKEA AM Core 2017 - MC - IRW	01-Jan-2017	02-Mar-2017
+
+
+
+100367162  JST  rolll -out support
+
+
+
+100056371  bench code
+
+
+100367162  investment code 
+
+100367377   AM core code.
+
+
+
+
+BU	Sub BU	Service Line	Location
+SOGETI_PES_ENERGY_N_UTILITIES	SOGETI_PES_ENERGY_N_UTILITIES 	Prodcut & Engineering Services 	Bangalore 6B Gr-3 floor 
+Assignment Details:
+Project Code	Project Name	Assignment Start Date	Assignment End Date
+PEEUGE020	P&ES-PU EU-GE Onboarding	13-Apr-2017	30-Jun-2017
+
+
+BU	Sub BU	Service Line	Location
+SOGETI_PES_ENERGY_N_UTILITIES	SOGETI_PES_ENERGY_N_UTILITIES 	Prodcut & Engineering Services 	Bangalore 6B Gr-3 floor 
+Assignment Details:
+Project Code	Project Name	Assignment Start Date	Assignment End Date
+PEEUGE020	P&ES-PU EU-GE Onboarding	13-Apr-2017	31-May-2017
+
+
+
+
+
+Employee Details:
+BU	Sub BU	Service Line	Location
+SOGETI_PES_ENERGY_N_UTILITIES	SOGETI_PES_ENERGY_N_UTILITIES 	Prodcut & Engineering Services 	Bangalore 6B Gr-3 floor 
+Assignment Details:
+Project Code	Project Name	Assignment Start Date	Assignment End Date
+PEINGE020	P&ES-PU IN-GE Onboarding	31-May-2017	31-Jul-2017
+
+
+]]]
+
+
+Bonus for the year 2016
