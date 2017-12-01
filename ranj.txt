@@ -1,0 +1,61 @@
+Exception  handling
+
+validation using  JSR notation
+
+
+logging 
+
+
+test cases junit n mockito
+
+
+angular 1 , angular 2,
+
+
+
+no xml we are using in spring mvc
+
+
+
+JSR-303/JSR-349 Bean Validation
+
+
+spring AOP  logging
+
+
+ spring rest full exception handling
+
+spring initializer
+
+
+code quality
+
+ibm websphere
+
+
+
+send exception in custom in other class
+
+
+
+
+
+
+
+
+
+
+===========
+
+spring form tags, angular, 
+JSR-03 , hibernate validation annotation.
+
+
+Message source
+
+ResourceHandleRegistry
+
+
+validation messages -. properties files ->
+
+acess static resources (boot strap CSS)
