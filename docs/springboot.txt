@@ -1,0 +1,94 @@
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples 
+
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-xml 
+
+[?1/?8/?2018 3:01 PM] Kulkarni, Vaishali: 
+https://github.com/spring-projects/spring-boot/blob/06572b010125b19a049fc8e2f71fd78df2dc1ce1/spring-boot-samples/spring-boot-sample-xml/pom.xml 
+
+
+ https://github.com/spring-projects/spring-boot.git 
+
+
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples 
+
+
+https://github.com/spring-projects/spring-boot.git 
+
+
+https://github.com/spring-projects/spring-boot/blob/06572b010125b19a049fc8e2f71fd78df2dc1ce1/spring-boot-samples/spring-boot-sample-xml/pom.xml 
+
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-xml 
+
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples  
+
+
+https://spring.io/guides/gs/actuator-service/ 	
+
+
+9108272816
+
+
+
+
+=================================
+
+conf id 76696566 
+
+6627
+
+Actuation : simulatiion of an environment set ur endpoint
+
+MVC
+security confihuation  
+
+<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
+
+https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.5.9.RELEASE/spring-boot-cli-1.5.9.RELEASE-bin.zip 
+
+https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#cli 
+
+
+
+
+
+
+tps://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#getting-started-installing-the-cli
+
+
+
+https://howtoprogram.xyz/2016/08/27/install-spring-boot-command-line-interface-on-windows/
+
+
+
+
+
+
+=============================
+Hi All,
+We are done with all the concepts/Project codes for today.
+·    Spring Boot MVC  
+·    Spring Data JPA using Spring Boot Application
+·    Implementing REST services into your Spring Boot app
+
+You are expected to get all the projects working, we can discuss issues that you may be facing on this.
+Also write the Greeting Service that is consumed by its Consumer project
+
+Thanks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+﻿[‎1/‎8/‎2018 12:54 PM]  Khodke, Yogesh:  
+https://howtoprogram.xyz/2016/08/27/install-spring-boot-command-line-interface-on-windows/ 
+ 
+[‎1/‎8/‎2018 12:54 PM]  Khodke, Yogesh:  
+check above url for cli setup
+ 
+
+ [‎1/‎8/‎2018 1:09 PM]  Kulkarni, Vaishali:  
+Nimish https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#cli 
+ 
+[‎1/‎8/‎2018 1:09 PM]  Kulkarni, Vaishali:  
+the part before cli is abt configuring Maven
+ 
+
+ https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples 
+ https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-xml 
+ 
+ https://github.com/spring-projects/spring-boot.git 
+ 
+
+
+<!-- Your own application should inherit from spring-boot-starter-parent -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-samples</artifactId>
+		<version>${revision}</version>
+	</parent>
+	
+https://spring.io/guides/gs/actuator-service/ 
+	
+	
+sample aop
+sample acurtor
+sample test
+
+Hi All,
+We are done with all the concepts/Project codes for today.
+ •	Spring Boot Introduction
+•	Spring Boot Features	
+•	Spring Maven Project
+•	Spring Boot Starter
+•	Spring Boot Project Wizard
+•	Developing your first spring boot application
+•	Creating executable spring application Jar
+•	Spring Boot CLI
+•	Using Spring STS IDE
+•	Spring Initializr 
+•	Spring Boot Annotations
+•	Spring Boot Properties
+•	Spring boot autoconfiguration
+•	Externalized Configuration and Customizing  SpringApplication
+•	Configuring tomcat and jetty embedded containers
+.    Spring Boot MVC  
+·    Spring Data JPA using Spring Boot Application
+·    Implementing REST services into your Spring Boot app
+
+You are expected to get all the projects working, we can discuss issues that you may be facing on this.
+Also write the Greeting Service that is consumed by its Consumer project
+
+You may download the classbook https://fts.capgemini.com/private/36176824141308/Spring_Boot-Classbook.pdf 
+
+or https://fts.capgemini.com/private/36176824141308/Spring_Boot-Classbook1.pdf
+
+Thanks.
+
+
+
+
+==================
+
+
+native
+
+HTTP 10.51.1.170  8080  manual yes  rmaniyan  pwd
+
+Https                          no
+  
+socks                           manual
+
+
+
+host 
+
+localhots           manual
+
+127.0.0.1    manual
